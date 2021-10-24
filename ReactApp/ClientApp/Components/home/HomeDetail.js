@@ -1,7 +1,7 @@
 import React from "react";
 import HomeDetailListItem from "./HomeDetailListItem";
 import { faEnvelope, faHashtag } from "@fortawesome/free-solid-svg-icons";
-import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function HomeDetail() {
   return (
@@ -21,8 +21,8 @@ function HomeDetail() {
         faIcon={faGithub}
         text={"ross-mclain-21"}
         faClasses="fa-1x"
-        isLink='true'
-        link='https://github.com/ross-mclain-21/ross-mclain-21'
+        isLink="true"
+        link="https://github.com/ross-mclain-21/ross-mclain-21"
       />
     </div>
   );
