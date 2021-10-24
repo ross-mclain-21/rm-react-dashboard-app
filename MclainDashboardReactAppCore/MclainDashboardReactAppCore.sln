@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MclainDashboardReactAppCore", "MclainDashboardReactAppCore\MclainDashboardReactAppCore.csproj", "{27C9AA97-5385-4177-B26A-47AF4B29619D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27C9AA97-5385-4177-B26A-47AF4B29619D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C9AA97-5385-4177-B26A-47AF4B29619D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C9AA97-5385-4177-B26A-47AF4B29619D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C9AA97-5385-4177-B26A-47AF4B29619D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7DF7798-2F98-419B-8534-EB7FE58EA9D0}
+	EndGlobalSection
+EndGlobal

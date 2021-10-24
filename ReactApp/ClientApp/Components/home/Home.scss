@@ -1,0 +1,39 @@
+﻿@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/containers";
+
+.terminal-line {
+  top: 0;
+}
+
+.header-text {
+  font-size: 6rem;
+}
+
+.home-container {
+  @extend .container;
+  color: rgb(0, 255, 0);
+}
+a {
+  color: rgb(0, 255, 0) !important;
+
+  &:hover{
+    color: rgb(0, 150, 0) !important;
+  }
+}
+
+.blink {
+  animation: blink-animation 1.5s steps(2, start) infinite;
+  -webkit-animation: blink-animation 1.5s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

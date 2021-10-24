@@ -1,0 +1,12 @@
+﻿//General Styling
+@font-face {
+  font-family: "IBMPlexMono";
+  src: local("IBMPlexMono"),
+    url("./Static/Fonts/IBMPlexMono-Regular.ttf") format("truetype");
+}
+@import "../node_modules/bootstrap/scss/bootstrap";
+body {
+  background-color: #222 !important;
+  color: white;
+  font-family: IBMPlexMono, serif !important;
+}
