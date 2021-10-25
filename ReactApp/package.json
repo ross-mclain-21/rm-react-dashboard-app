@@ -51,7 +51,7 @@
     "dev:all": "npm-run-all --serial dev:build-server dev:build-client dev:server",
     "prod:bundlefordeploy": "webpack --config webpack.client.js",
     "prod:cleanwwwroot": "rimraf ../MclainDashboardReactAppCore/MclainDashboardReactAppCore/wwwroot",
-    "prod:copytowwwroot": "cpx \"public/**/*\" ../MclainDashboardReactAppCore/MclainDashboardReactAppCore/wwwroot",
+    "prod:copytowwwroot": "npx cpx \"public/**/*\" ../MclainDashboardReactAppCore/MclainDashboardReactAppCore/wwwroot",
     "prod:deploy": "npm-run-all --serial prod:bundlefordeploy prod:cleanwwwroot prod:copytowwwroot"
   },
   "author": "ross.mclain",

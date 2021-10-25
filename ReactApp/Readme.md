@@ -10,4 +10,4 @@ npm run start:dev
 
 npx webpack --config webpack.client.js
 
-npx cpx "public/\*_/_" ../MclainDashboardReactAppCore/MclainDashboardReactAppCore/wwwroot
+npx cpx "public/**/*" ../MclainDashboardReactAppCore/MclainDashboardReactAppCore/wwwroot
