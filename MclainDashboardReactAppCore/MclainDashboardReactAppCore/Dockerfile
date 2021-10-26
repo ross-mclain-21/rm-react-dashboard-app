@@ -1,3 +1,5 @@
+
+
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
 WORKDIR /app
 RUN echo $(ls -l /app)
@@ -8,9 +10,9 @@ FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
 RUN echo $(ls -l /src)
 
-#COPY ["MclainDashboardReactAppCore/MclainDashboardReactAppCore.csproj", "MclainDashboardReactAppCore/"]
+COPY ["MclainDashboardReactAppCore", "/src/MclainDashboardReactAppCore/"]
 #RUN dotnet restore "MclainDashboardReactAppCore/MclainDashboardReactAppCore.csproj"
-COPY . ./
+#COPY . ./
 
 WORKDIR "/src/MclainDashboardReactAppCore"
 RUN echo $(ls -l /src/MclainDashboardReactAppCore)
