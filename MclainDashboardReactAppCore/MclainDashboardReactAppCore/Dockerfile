@@ -12,12 +12,12 @@ COPY ["MclainDashboardReactAppCore/MclainDashboardReactAppCore.csproj", "MclainD
 RUN dotnet restore "MclainDashboardReactAppCore/MclainDashboardReactAppCore.csproj"
 COPY . .
 WORKDIR "/src/MclainDashboardReactAppCore"
-RUN dotnet build "MclainDashboardReactAppCore.csproj" -c Release -o /app
+RUN dotnet build "MclainDashboardReactAppCore.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "MclainDashboardReactAppCore.csproj" -c Release -o /app
+RUN dotnet publish "MclainDashboardReactAppCore.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "MclainDashboardReactAppCore.dll"]
