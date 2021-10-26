@@ -25,12 +25,13 @@ namespace MclainDashboardReactAppCore
                 app.UseDeveloperExceptionPage();
             }
 
-            DefaultFilesOptions options = new DefaultFilesOptions();
+            var options = new DefaultFilesOptions();
             options.DefaultFileNames.Clear();
             options.DefaultFileNames.Add("index.html");
 
             app.UseDefaultFiles(options);
 
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
         }
     }
