@@ -49,5 +49,6 @@ jobs:
       
     - name: commit
       run: |
+        git add --all
         git commit -m "react build auto-deploy"
         git push origin master
