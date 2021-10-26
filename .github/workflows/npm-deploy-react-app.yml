@@ -45,7 +45,5 @@ jobs:
       run:  git config user.email "<>"
       
     - name: commit
-        run: |
-          # Stage the file, commit and push
-          git commit -m "react build auto-deploy"
-          git push origin master
+        run:  git commit -m "react build auto-deploy"
+        run:  git push origin master
