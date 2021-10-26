@@ -35,15 +35,19 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: ReactApp/package-lock.json
-    - run: npm ci
-    - run: npm test
-    - run: npm run build --if-present
-    - run: npm run prod:deploy
+    - name: Run NPM Commands
+      run: |
+          npm ci
+          npm test
+          npm run build --if-present
+          npm run prod:deploy
     
     - name: setup git config
-    - run:  git config user.name "GitHub Actions Bot"
-    - run:  git config user.email "<>"
+      run: |  
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
       
     - name: commit
-    - run:  git commit -m "react build auto-deploy"
-    - run:  git push origin master
+      run: |
+        git commit -m "react build auto-deploy"
+        git push origin master
