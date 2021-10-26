@@ -21,7 +21,6 @@ function TypeWriter({ message, classes, typingSpeed = 300 }) {
     handleType();
     return () => clearTimeout(timer);
   }, [message]);
-
   
   function getCurrentText(currentState) {
     return currentState.isDeleting
