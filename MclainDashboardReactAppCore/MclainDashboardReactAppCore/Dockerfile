@@ -9,7 +9,8 @@ WORKDIR /src
 #RUN dotnet restore "MclainDashboardReactAppCore/MclainDashboardReactAppCore.csproj"
 COPY . ./
 
-WORKDIR "/src/MclainDashboardReactAppCore"
+WORKDIR "/src/MclainDashboardReactAppCore/MclainDashboardReactAppCore/"
+RUN ls
 RUN dotnet restore "MclainDashboardReactAppCore.csproj"
 RUN dotnet build -c Release -o /app
 
