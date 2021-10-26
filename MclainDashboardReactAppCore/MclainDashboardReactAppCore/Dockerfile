@@ -20,4 +20,6 @@ RUN dotnet publish -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
+COPY ["MclainDashboardReactAppCore/wwwroot", "/"]
+
 ENTRYPOINT ["dotnet", "MclainDashboardReactAppCore.dll"]
