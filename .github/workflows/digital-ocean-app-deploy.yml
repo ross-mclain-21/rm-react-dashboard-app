@@ -1,0 +1,30 @@
+# This is a basic workflow that is manually triggered
+
+name: Trigger DigitalOcean App Deploy
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  push:
+    branches: [ master ]
+    paths-ignore:
+      - '**.gitignore'
+      - '**.gitattributes'
+      - '**.md'
+      - '.github/**'
+      - 'ReactApp/**'
+  pull_request:
+    branches: [ master ]
+    
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Runs a single command using the runners shell
+    - name: HTTP Request Action
+      uses: fjogeleit/http-request-action@v1.8.1
+      with:
+        url: https://api.digitalocean.com/v2/apps/628173a3-b761-4bca-bcfb-5a8370726f5c/deployments
+        method: 'POST'
+        bearerToken: ${{ secrets.DIGITALOCEAN_TOKEN }}
