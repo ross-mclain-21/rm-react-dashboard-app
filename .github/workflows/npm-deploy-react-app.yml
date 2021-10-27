@@ -41,8 +41,6 @@ jobs:
           npm test
           npm run build --if-present
           npm run prod:deploy
-          npm login --registry=https://npm.pkg.github.com --scope=@phanatic
-          npm publish
     
     - name: setup git config
       run: |  
