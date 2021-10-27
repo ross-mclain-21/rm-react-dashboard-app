@@ -2,6 +2,7 @@ name: Node.js Package Publish
 
 on:
   release:
+  workflow_dispatch:
   
 defaults:
   run:
