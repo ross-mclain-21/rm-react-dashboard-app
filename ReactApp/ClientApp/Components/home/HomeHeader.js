@@ -6,7 +6,7 @@ import TypeWriter from "../common/TypeWriter";
 function HomeHeader() {
   return (
     <div className="d-flex align-items-center mb-3">
-      <FontAwesomeIcon icon={faChevronRight} className="fa-6x" />
+      <FontAwesomeIcon icon={faChevronRight} className="header-chevron" />
       <TypeWriter
         message={"Ross McLain"}
         classes="header-text"
@@ -14,9 +14,17 @@ function HomeHeader() {
       />
       <div className="position-relative">
         <div className="position-absolute terminal-line">
-          <FontAwesomeIcon icon={faMinus} className="fa-4x blink" />
+          <FontAwesomeIcon
+            icon={faMinus}
+            className="header-typewriter-dash blink"
+          />
         </div>
       </div>
+
+      <FontAwesomeIcon
+        icon={faMinus}
+        className="header-typewriter-dash opacity-0"
+      />
     </div>
   );
 }

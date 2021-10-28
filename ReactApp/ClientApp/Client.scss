@@ -1,9 +1,11 @@
 ﻿@use "sass:math";
-
+//global variables
 $coding-green-color: rgb(0, 255, 0);
 $coding-green-color-hover: rgb(0, 150, 0);
 $background-color:#222;
-
+$breakpoint-sm:576px;
+$breakpoint-lg:992px;
+$breakpoint-xl:1200px;
 
 //General Styling
 @font-face {
@@ -17,12 +19,38 @@ body {
   background-color: $background-color !important;
   color: white;
   font-family: IBMPlexMono, serif !important;
+  
+}
+#app {
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y:auto;
+  display: flex;
+  flex-direction: column;
 }
 
+//bootstrap extensions
+.container {
+  @extend .container;
+  color: $coding-green-color;
+  flex-grow: 1;
+}
+.btn-link{
+  @extend .btn-link;
+  color: $coding-green-color;
+  padding-left:0;
+  padding-right:0;
+  &:hover{
+    color:$coding-green-color-hover;
+  }
+}
+
+//custom colors
 .color-code-green{
   color:$coding-green-color;
 }
 
+//custom buttons
 .btn-code-green{
   @extend .btn-success;
   background-color: $coding-green-color;
@@ -44,6 +72,8 @@ body {
   }
 }
 
+//starfield background.
+//Inspired and edited from https://codepen.io/inegoita/pen/wLxObg
 
 $stars: 350;         // Number of start per layer
 $depth: 300;         // Depth between star layers

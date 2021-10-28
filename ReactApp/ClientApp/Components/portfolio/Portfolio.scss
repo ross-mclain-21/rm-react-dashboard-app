@@ -1,0 +1,22 @@
+﻿@import "ClientApp/Client.scss";
+
+.portfolio-collapse {
+  @extend .collapse;
+  border-left: 2px solid $coding-green-color;
+  padding-left:3em;
+}
+.portfolio-description-block{
+  max-width: 500px;
+}
+
+.portfolio-img-sneaky{
+  border:2px solid $coding-green-color;
+  opacity: 0.7;
+}
+
+
+@media (max-width: $breakpoint-lg) {
+  .portfolio-item-block{
+    min-width: 200px;
+  }
+}

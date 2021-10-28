@@ -7,10 +7,11 @@
 .header-text {
   font-size: 7rem;
 }
-
-.home-container {
-  @extend .container;
-  color: $coding-green-color;
+.header-chevron{
+  font-size:6em;
+}
+.header-typewriter-dash{
+  font-size:4em;
 }
 
 a {
@@ -33,5 +34,34 @@ a {
 @-webkit-keyframes blink-animation {
   to {
     visibility: hidden;
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .header-text{
+    font-size: 3em;
+  }
+  .header-chevron{
+    font-size:2.5em;
+  }
+  .header-typewriter-dash{
+    font-size:1.5em;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .header-text{
+    font-size: 2.6em;
+    border-bottom: 1px solid $coding-green-color;
+  }
+  .header-chevron{
+    display: none;
+  }
+  .header-typewriter-dash{
+    display: none;
+  }
+  
+  span{
+    font-size: 0.75em;
   }
 }
