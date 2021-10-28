@@ -9,7 +9,7 @@ function HomeHeader() {
       <FontAwesomeIcon icon={faChevronRight} className="fa-6x" />
       <TypeWriter
         message={"Ross McLain"}
-        classes="header-text fw-bold"
+        classes="header-text"
         typingSpeed={200}
       />
       <div className="position-relative">

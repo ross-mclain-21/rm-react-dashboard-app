@@ -1,61 +1,42 @@
-import React, { Component } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
+import "./RouteNotFound.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGrinBeamSweat } from "@fortawesome/free-solid-svg-icons";
 
-class RouteNotFound extends Component {
-  componentDidMount() {
-    this.props.action(true);
-  }
-
-  render() {
-    console.log("route not found in RouteNotFound.js.  Bubble up...");
-    //this.props.action(false);
-    return (
-      <Route
-        render={({ staticContext }) => {
-          if (staticContext) {
-            staticContext.status = 404;
-          }
-          return (
-            <div>
-              <h1>404 : Not Found!</h1>
+function RouteNotFound() {
+  return (
+    <Route
+      render={({ staticContext }) => {
+        if (staticContext) {
+          staticContext.status = 404;
+        }
+        return (
+          <>
+            <div className="stars" />
+            <div className="route-not-found-container">
+              <div className="row h-100">
+                <div className="col-lg-6 d-lg-flex d-none d-flex flex-column align-items-center justify-content-center">
+                  <h1 className="four-oh-four-text fw-bold">404</h1>
+                </div>
+                <div className="col-lg-6 d-flex flex-column justify-content-center">
+                  <h1 className="four-oh-four-text fw-bold d-lg-none d-block">
+                    404
+                  </h1>
+                  <FontAwesomeIcon
+                    icon={faGrinBeamSweat}
+                    className="fa-8x mb-4"
+                  />
+                  <h1>OOPS!</h1>
+                  <p>We can't seem to find the page you're looking for.</p>
+                </div>
+              </div>
             </div>
-          );
-        }}
-      />
-    );
-  }
+          </>
+        );
+      }}
+    />
+  );
 }
 
-RouteNotFound.defaultProps = {};
-
 export default RouteNotFound;
-
-// 1/4/2019: NOTE
-// I'M LEAVING THE BELOW CODE IN COMMENTED OUT JUST TO MAKE IT EXTRA CLEAR THAT THIS WAS THE CODE
-// BEFORE THE 1/4/2019 UPDATED AND THE NEW CODE ABOVE REPLACES IT.
-// THANKS GO TO @PATRICKWEEGAN FOR REPORTING THE ISSUE
-// https://github.com/pkellner/pluralsight-course-react-aspnet-core/issues/3
-// I DON'T LIKE LEAVING IN COMMENTED CODE, BUT IN THIS CASE, I THINK IT IS HELPFUL TO AVOID CONFUSION IF SOMEONE HAS
-// OLD CODE AROUND AND DOES NOT REALIZE IT WAS UPDATED. THIS MAKES IT EXTRA CLEAR -PETER KELLNER
-//
-
-// import React, {Component} from 'react';
-// import { Route } from 'react-router-dom';
-//
-// class RouteNotFound extends Component {
-//     render() {
-//         return (
-//             <Route render={() => {
-//                 return (
-//                     <div>
-//                         <h1>404 : Not Found!</h1>
-//                     </div>
-//                 )
-//             }}/>
-//         );
-//     }
-// }
-//
-// RouteNotFound.defaultProps = {};
-//
-// export default RouteNotFound;

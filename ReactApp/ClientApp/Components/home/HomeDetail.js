@@ -1,10 +1,7 @@
 import React from "react";
 import HomeDetailListItem from "./HomeDetailListItem";
-import {
-  faEnvelope,
-  faHashtag
-} from "@fortawesome/free-solid-svg-icons";
-import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faHashtag } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function HomeDetail() {
   return (

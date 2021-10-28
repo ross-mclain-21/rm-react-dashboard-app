@@ -1,12 +1,22 @@
-﻿//General Styling
+﻿$coding-green-color: rgb(0, 255, 0);
+$coding-green-color-hover: rgb(0, 150, 0);
+$background-color:#222;
+
+
+//General Styling
 @font-face {
   font-family: "IBMPlexMono";
   src: local("IBMPlexMono"),
-    url("./Static/Fonts/IBMPlexMono-Regular.ttf") format("truetype");
+    url("/ClientApp/Static/Fonts/IBMPlexMono-Regular.ttf") format("truetype");
 }
 @import "../node_modules/bootstrap/scss/bootstrap";
+
 body {
-  background-color: #222 !important;
+  background-color: $background-color !important;
   color: white;
   font-family: IBMPlexMono, serif !important;
+}
+
+.color-code-green{
+  color:$coding-green-color;
 }
