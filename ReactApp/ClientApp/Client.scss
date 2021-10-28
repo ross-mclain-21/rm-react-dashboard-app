@@ -1,4 +1,6 @@
-﻿$coding-green-color: rgb(0, 255, 0);
+﻿@use "sass:math";
+
+$coding-green-color: rgb(0, 255, 0);
 $coding-green-color-hover: rgb(0, 150, 0);
 $background-color:#222;
 
@@ -19,4 +21,76 @@ body {
 
 .color-code-green{
   color:$coding-green-color;
+}
+
+.btn-code-green{
+  @extend .btn-success;
+  background-color: $coding-green-color;
+  
+  &:hover{
+    background-color: $coding-green-color-hover;
+  }
+}
+
+.btn-outline-code-green{
+  @extend .btn-outline-success;
+  border-color: $coding-green-color;
+  color: $coding-green-color;
+  background-color: transparent;
+
+  &:hover{
+    background-color: $coding-green-color;
+    color: $background-color !important;
+  }
+}
+
+
+$stars: 350;         // Number of start per layer
+$depth: 300;         // Depth between star layers
+$speed: 10s;          // Number of seconds to transition between layers
+$width: 5000;        // Width of the starfield
+$height: 5000;        // Height of the starfield
+
+
+.stars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  $box-shadow: ();
+  @for $i from 0 through $stars {
+    $box-shadow: $box-shadow, (random($width)-(math.div($width,2)) + px) (random($height)-(math.div($height,2)) + px) hsl(90,0%,75%);
+  }
+  animation: fly $speed ease-out infinite alternate;
+  transform-style: preserve-3d;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    box-shadow: $box-shadow;
+  }
+  &:after {
+    transform: translateZ(-$depth * 2 + px);
+    animation: fade $speed ease-out infinite alternate;
+  }
+}
+
+@keyframes fly {
+  from {
+    transform: translateZ(0px) perspective(300px);
+  }
+  to {
+    transform: translateZ($depth) perspective(0px);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
