@@ -3,11 +3,11 @@ import "./Portfolio.scss";
 import { Button, Collapse } from "react-bootstrap";
 
 function PortfolioCollapse({
+  description,
   images = [],
   title,
-  type = "WEBSITE",
-  description,
   technologies,
+  type = "WEBSITE",
 }) {
   return (
     <div className="row mb-5">

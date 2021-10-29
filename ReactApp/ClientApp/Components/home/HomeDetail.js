@@ -50,6 +50,9 @@ function HomeDetail() {
       <Button className="btn-outline-code-green mt-3" href="/portfolio">
         Portfolio
       </Button>
+      <Button className="btn-outline-code-green mt-3" href="/resume">
+        Resume
+      </Button>
     </div>
   );
 }

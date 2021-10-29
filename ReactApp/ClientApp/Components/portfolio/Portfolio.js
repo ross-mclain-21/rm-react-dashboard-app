@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Portfolio.scss";
 import PortfolioCollapse from "./PortfolioCollapse";
 import PortfolioCollapseItem from "./PortfolioCollapseItem";
@@ -56,7 +56,11 @@ function Portfolio() {
                     alt: "Celebration At Theos Complete",
                   },
                 ]}
-                title="King and Country"
+                title={
+                  <a href="https://www.mclain.de/CelebrationAtTheos/CelebrationAtTheos/Index">
+                    Celebration At Theos
+                  </a>
+                }
                 type="Video Game Development"
                 technologies="C#, Unity"
                 description="My friends and I entered into a 48 hour game jam with the theme of celebration. 
@@ -126,10 +130,14 @@ function Portfolio() {
                   },
                   {
                     src: "/assets/images/portfolio/Ballgame/running.png",
-                    alt: "King And County Running",
+                    alt: "Ninja Runner Running",
                   },
                 ]}
-                title="Ninja Runner"
+                title={
+                  <a href="https://www.mclain.de/NinjaRunner/NinjaRunner/Index">
+                    Ninja Runner
+                  </a>
+                }
                 type="Video Game Development"
                 technologies="C#, Unity"
                 description="This is a small, mobile friendly game I developed during my internship at the CI2 lab. 
@@ -151,7 +159,11 @@ function Portfolio() {
                     alt: "King And County Complete",
                   },
                 ]}
-                title="King and Country"
+                title={
+                  <a href="https://www.mclain.de/KingCountry/KingCountry/Index">
+                    King and Country
+                  </a>
+                }
                 type="Video Game Development"
                 technologies="C#, Unity"
                 description="During an internship at the CI2 lab on the USM campus while attending college, 
