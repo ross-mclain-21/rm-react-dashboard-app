@@ -7,6 +7,7 @@ function PortfolioCollapse({
   title,
   type = "WEBSITE",
   description,
+  technologies,
 }) {
   return (
     <div className="row mb-5">
@@ -26,6 +27,11 @@ function PortfolioCollapse({
           <h1>{title}</h1>
           <span>{type}</span>
           <hr />
+          {technologies != null ? (
+            <p className="fw-bold small">{technologies}</p>
+          ) : (
+            <></>
+          )}
           <p className="fst-italic portfolio-description-block">
             {description}
           </p>
