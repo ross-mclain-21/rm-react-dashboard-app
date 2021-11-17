@@ -2,7 +2,17 @@ import React, { useState } from "react";
 import "./Portfolio.scss";
 import { Button, Collapse } from "react-bootstrap";
 
-function PortfolioCollapse({ collapseId, buttonText, innerComponent }) {
+interface PortfolioCollapseInput {
+  collapseId: string;
+  buttonText: string;
+  innerComponent: any;
+}
+
+function PortfolioCollapse({
+  collapseId,
+  buttonText,
+  innerComponent,
+}: PortfolioCollapseInput) {
   const [open, setOpen] = useState(true);
   return (
     <>

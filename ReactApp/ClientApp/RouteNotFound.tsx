@@ -10,7 +10,7 @@ function RouteNotFound() {
     <Route
       render={({ staticContext }) => {
         if (staticContext) {
-          staticContext.status = 404;
+          staticContext.statusCode = 404;
         }
         return (
           <>

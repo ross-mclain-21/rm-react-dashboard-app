@@ -23,7 +23,7 @@ function HomeDetail() {
           text={"Tyler Technologies"}
           faClasses="small"
           textClasses="small"
-          isLink="true"
+          isLink={true}
           link="https://www.tylertech.com/"
         />
       </div>
@@ -44,7 +44,7 @@ function HomeDetail() {
         faIcon={faGithub}
         text={"ross-mclain-21"}
         faClasses="fa-1x"
-        isLink="true"
+        isLink={true}
         link="https://github.com/ross-mclain-21/ross-mclain-21"
       />
       <Button className="btn-outline-code-green mt-3" href="/portfolio">

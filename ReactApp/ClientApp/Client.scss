@@ -78,7 +78,7 @@ body {
 $stars: 350;         // Number of start per layer
 $depth: 300;         // Depth between star layers
 $speed: 10s;          // Number of seconds to transition between layers
-$width: 5000;        // Width of the starfield
+$width: 7500;        // Width of the starfield
 $height: 5000;        // Height of the starfield
 
 
@@ -86,8 +86,8 @@ $height: 5000;        // Height of the starfield
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 2px;
-  height: 2px;
+  width: 8px;
+  height: 8px;
   $box-shadow: ();
   @for $i from 0 through $stars {
     $box-shadow: $box-shadow, (random($width)-(math.div($width,2)) + px) (random($height)-(math.div($height,2)) + px) hsl(90,0%,75%);

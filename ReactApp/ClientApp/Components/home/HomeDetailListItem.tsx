@@ -1,6 +1,16 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TypeWriter from "../common/TypeWriter";
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+
+interface HomeDetailListItemInput {
+  faIcon: IconDefinition;
+  text: string;
+  faClasses?: string;
+  textClasses?: string;
+  isLink?: boolean;
+  link?: string;
+}
 
 function HomeDetailListItem({
   faIcon,
@@ -9,10 +19,10 @@ function HomeDetailListItem({
   textClasses = "",
   isLink = false,
   link = "",
-}) {
+}: HomeDetailListItemInput) {
   return (
     <>
-      {isLink === false ? (
+      {!isLink ? (
         <div className="d-flex align-items-center my-2">
           <div className="me-2 d-flex">
             <FontAwesomeIcon icon={faIcon} className={faClasses} />

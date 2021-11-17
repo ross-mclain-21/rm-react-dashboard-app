@@ -29,7 +29,7 @@ function Portfolio() {
                 title="This.Website"
                 type="React App"
                 technologies="JS, React, SCSS, C#, ASP.Net Core, Docker"
-                description="This is my newest application and a replacement for my previous, legacy personal website. 
+                description="This is my newest application and a replacement for my previous personal website. 
                 I have worked on a few react apps but this is the first time I have delved into fully building it myself from the ground up.
                 I have built it on top of ASP.Net Core and have it deploying automatically from github, using github actions, to digital ocean using docker."
               />

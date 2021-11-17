@@ -7,7 +7,7 @@ const { merge } = require("webpack-merge");
 const baseConfig = require("./webpack.base.js");
 
 const config = {
-  entry: APP_DIR + "/Client.js",
+  entry: APP_DIR + "\\Client.tsx",
   devServer: {
     static: PUBLIC_DIR,
     port: 9000,

@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import "./Portfolio.scss";
-import { Button, Collapse } from "react-bootstrap";
+import { Image } from "../common/CommonInterfaces";
 
-function PortfolioCollapse({
+interface PortfolioCollapseItemInput {
+  description: string;
+  images: Image[];
+  title: string | object;
+  technologies: string;
+  type?: string;
+}
+
+function PortfolioCollapseItem({
   description,
   images = [],
   title,
   technologies,
   type = "WEBSITE",
-}) {
+}: PortfolioCollapseItemInput) {
   return (
     <div className="row mb-5">
       <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center">
-        {images.map((img) => (
+        {images.map((img: Image) => (
           <img
             src={img.src}
             className="img-fluid portfolio-img-sneaky mb-3"
@@ -41,4 +49,4 @@ function PortfolioCollapse({
   );
 }
 
-export default PortfolioCollapse;
+export default PortfolioCollapseItem;
