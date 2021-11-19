@@ -45,14 +45,16 @@ function Resume() {
           <Document
             file="/assets/files/resume.pdf"
             onLoadSuccess={onDocumentLoadSuccess}
-            className=""
+            className="mb-3"
           >
             {windowDimensions.width < 300 ? (
               <Page pageNumber={pageNumber} scale={0.3} />
             ) : windowDimensions.width < 600 ? (
               <Page pageNumber={pageNumber} scale={0.5} />
-            ) : (
+            ) : windowDimensions.width < 1200 ? (
               <Page pageNumber={pageNumber} scale={1} />
+            ) : (
+              <Page pageNumber={pageNumber} scale={1.25} />
             )}
           </Document>
           <div className="d-flex align-items-center justify-content-between flex-md-nowrap flex-wrap">
