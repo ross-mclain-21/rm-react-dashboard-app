@@ -1,4 +1,4 @@
-import React, { useState, useEffect, SetStateAction } from "react";
+import React, { useState, SetStateAction, useEffect } from "react";
 import "./Resume.scss";
 import { Button } from "react-bootstrap";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
@@ -16,6 +16,24 @@ function Resume() {
       console.error(e);
     }
   }
+  function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height,
+    };
+  }
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+  }, []);
   return (
     <>
       <div className="stars" />
@@ -29,9 +47,15 @@ function Resume() {
             onLoadSuccess={onDocumentLoadSuccess}
             className=""
           >
-            <Page pageNumber={pageNumber} height={700} width={700} />
+            {windowDimensions.width < 300 ? (
+              <Page pageNumber={pageNumber} scale={0.3} />
+            ) : windowDimensions.width < 600 ? (
+              <Page pageNumber={pageNumber} scale={0.5} />
+            ) : (
+              <Page pageNumber={pageNumber} scale={1} />
+            )}
           </Document>
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between flex-md-nowrap flex-wrap">
             <a
               href="/assets/files/resume.pdf"
               className="btn btn-outline-code-green d-flex align-items-center"
