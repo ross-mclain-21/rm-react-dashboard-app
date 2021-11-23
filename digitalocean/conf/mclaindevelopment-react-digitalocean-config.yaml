@@ -1,0 +1,28 @@
+alerts:
+  - rule: DEPLOYMENT_FAILED
+  - rule: DOMAIN_FAILED
+databases:
+  - engine: PG
+    name: mc-development-db
+    num_nodes: 1
+    size: db-s-dev-database
+    version: "12"
+domains:
+  - domain: mclaindevelopment.com
+    type: PRIMARY
+    zone: mclaindevelopment.com
+envs:
+  - key: BUILDKIT_PROGRESS
+    scope: RUN_AND_BUILD_TIME
+    value: plain
+name: rm-react-dashboard-app
+region: nyc
+static_sites:
+  - catchall_document: index.html
+    github:
+      branch: master
+      repo: ross-mclain-21/rm-react-dashboard-app
+    name: rm-react-dashboard
+    output_dir: public
+    routes:
+      - path: /
