@@ -11,14 +11,9 @@ on:
       - '**.gitattributes'
       - '**.md'
       - '.github/**'
-      - 'MclainDashboardReactAppCore/**'
   pull_request:
     branches: [ master ]
   workflow_dispatch:
-    
-defaults:
-      run:
-        working-directory: ReactApp/
         
 jobs:
   build:
@@ -35,7 +30,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: ReactApp/package-lock.json
+        cache-dependency-path: package-lock.json
     - name: Run NPM Commands
       run: |
           npm ci
