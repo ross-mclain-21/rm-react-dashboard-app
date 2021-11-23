@@ -75,7 +75,7 @@
     "prod:bundlefordeploy": "webpack --config webpack.client.js",
     "prod:cleanwwwroot": "rimraf ../MclainDashboardReactAppCore/MclainDashboardReactAppCore/wwwroot",
     "prod:copytowwwroot": "npx cpx \"public/**/*\" ../MclainDashboardReactAppCore/MclainDashboardReactAppCore/wwwroot",
-    "prod:deploy": "npm-run-all --serial prod:bundlefordeploy prod:cleanwwwroot prod:copytowwwroot"
+    "prod:deploy": "npm-run-all --serial prod:bundlefordeploy"
   },
   "author": "ross-mclain-21",
   "license": "ISC",
