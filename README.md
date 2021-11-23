@@ -1,7 +1,13 @@
-# rm-react-dashboard-app
+﻿1st Terminal:
 
-My new and recreated personal website created using react.js and asp.net core
+npm install
 
-React App Compile And Deploy To ASP.Net
+npm build
 
-[![NPM Deploy React App](https://github.com/ross-mclain-21/rm-react-dashboard-app/actions/workflows/npm-deploy-react-app.yml/badge.svg?branch=master)](https://github.com/ross-mclain-21/rm-react-dashboard-app/actions/workflows/npm-deploy-react-app.yml)
+npm run start:dev
+
+2nd Terminal:
+
+npx webpack --config webpack.client.js
+
+npx cpx "public/\*_/_" ../MclainDashboardReactAppCore/MclainDashboardReactAppCore/wwwroot
