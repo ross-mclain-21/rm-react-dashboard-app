@@ -22,18 +22,19 @@ function HomeDetail() {
           faIcon={faAt}
           text={"Tyler Technologies"}
           faClasses="small"
-          textClasses="small"
           isLink={true}
           link="https://www.tylertech.com/"
         />
       </div>
 
       <span className="my-1" />
+        
       <HomeDetailListItem
         faIcon={faEnvelope}
         text={"mclain.development@gmail.com"}
         faClasses="fa-1x"
       />
+        
       <HomeDetailListItem
         faIcon={faHashtag}
         text={"1 (207) 420-6255"}

@@ -87,55 +87,59 @@ body {
   }
 }
 
-//starfield background.
-//Inspired and edited from https://codepen.io/inegoita/pen/wLxObg
 
-$stars: 350;         // Number of start per layer
-$depth: 300;         // Depth between star layers
-$speed: 10s;          // Number of seconds to transition between layers
-$width: 7500;        // Width of the starfield
-$height: 5000;        // Height of the starfield
+@media (min-width: $breakpoint-lg) {
+
+  //starfield background.
+  //Inspired and edited from https://codepen.io/inegoita/pen/wLxObg
+
+  $stars: 350;         // Number of start per layer
+  $depth: 300;         // Depth between star layers
+  $speed: 10s;          // Number of seconds to transition between layers
+  $width: 7500;        // Width of the starfield
+  $height: 5000;        // Height of the starfield
 
 
-.stars {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  $box-shadow: ();
-  @for $i from 0 through $stars {
-    $box-shadow: $box-shadow, (random($width)-(math.div($width,2)) + px) (random($height)-(math.div($height,2)) + px) hsl(90,0%,75%);
-  }
-  animation: fly $speed ease-out infinite alternate;
-  transform-style: preserve-3d;
-
-  &:after {
-    content: "";
+  .stars {
     position: absolute;
-    width: inherit;
-    height: inherit;
-    box-shadow: $box-shadow;
-  }
-  &:after {
-    transform: translateZ(-$depth * 2 + px);
-    animation: fade $speed ease-out infinite alternate;
-  }
-}
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    $box-shadow: ();
+    @for $i from 0 through $stars {
+      $box-shadow: $box-shadow, (random($width)-(math.div($width,2)) + px) (random($height)-(math.div($height,2)) + px) hsl(90,0%,75%);
+    }
+    animation: fly $speed ease-out infinite alternate;
+    transform-style: preserve-3d;
 
-@keyframes fly {
-  from {
-    transform: translateZ(0px) perspective(300px);
+    &:after {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      box-shadow: $box-shadow;
+    }
+    &:after {
+      transform: translateZ(-$depth * 2 + px);
+      animation: fade $speed ease-out infinite alternate;
+    }
   }
-  to {
-    transform: translateZ($depth) perspective(0px);
+
+  @keyframes fly {
+    from {
+      transform: translateZ(0px) perspective(300px);
+    }
+    to {
+      transform: translateZ($depth) perspective(0px);
+    }
   }
-}
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }

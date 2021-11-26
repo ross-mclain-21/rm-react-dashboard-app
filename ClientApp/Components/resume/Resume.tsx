@@ -8,6 +8,7 @@ import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 function Resume() {
   const [numPages, setNumPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
+  const resumePath = process.env.NODE_ENV == 'development'?'/assets/files/resume.pdf':'https://mc-development.nyc3.digitaloceanspaces.com/resume.pdf';
 
   function onDocumentLoadSuccess(pdf: SetStateAction<any>) {
     try {
@@ -34,6 +35,7 @@ function Resume() {
 
     window.addEventListener("resize", handleResize);
   }, []);
+  
   return (
     <>
       <div className="stars" />
@@ -43,7 +45,7 @@ function Resume() {
             Return Home!
           </Button>
           <Document
-            file="/assets/files/resume.pdf"
+            file={resumePath}
             onLoadSuccess={onDocumentLoadSuccess}
             className=""
           >
@@ -59,7 +61,7 @@ function Resume() {
           </Document>
           <div className="d-flex align-items-center justify-content-between flex-md-nowrap flex-wrap mt-4">
             <a
-              href="/assets/files/resume.pdf"
+              href={resumePath}
               className="btn btn-outline-code-green d-flex align-items-center"
             >
               <FontAwesomeIcon icon={faFileDownload} className="mb-0" />
