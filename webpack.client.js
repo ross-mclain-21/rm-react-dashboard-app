@@ -1,4 +1,6 @@
 const path = require("path");
+const Dotenv = require('dotenv-webpack');
+
 
 const APP_DIR = path.resolve(__dirname, "ClientApp");
 const PUBLIC_DIR = path.resolve(__dirname, "public");
@@ -8,6 +10,9 @@ const baseConfig = require("./webpack.base.js");
 
 const config = {
   entry: APP_DIR + "/Client.tsx",
+  plugins: [
+    new Dotenv()
+  ],
   devServer: {
     static: PUBLIC_DIR,
     port: 9000,
