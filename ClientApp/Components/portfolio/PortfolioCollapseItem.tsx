@@ -1,66 +1,67 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Portfolio.scss";
 import { Image } from "../common/CommonInterfaces";
 import { v4 as uuid } from "uuid";
-
-interface PortfolioCollapseItemInput {
-  description: string;
-  images: Image[];
-  title: string | object;
-  technologies: string[];
-  type?: string;
-}
+import { IPortfolioCollapseItemInput } from "./Portfolio";
+import { PortfolioContext } from "./PortfolioContext";
 
 function PortfolioCollapseItem({
   description,
   images = [],
   title,
+  link,
   technologies,
-  type = "WEBSITE",
-}: PortfolioCollapseItemInput) {
+  type,
+  year,
+}: IPortfolioCollapseItemInput) {
+  const { selectedTechnologies } = useContext(PortfolioContext);
+
   return (
-    <div className="row mb-5">
-      <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center">
-        {images.map((img: Image) => {
-          const imgUuid = uuid();
-          return (
-            <img
-              key={imgUuid}
-              id={imgUuid}
-              src={img.src}
-              className="img-fluid portfolio-img-sneaky mb-3"
-              width={img.width ?? "400px"}
-              height={img.height ?? "50px"}
-              alt={img.alt}
-            />
-          );
-        })}
-      </div>
-      <div className="col-lg-6">
-        <div className="portfolio-item-block">
-          <h1>{title}</h1>
-          <span>{type}</span>
-          <hr />
-          {technologies != null ? (
-            <div className="d-flex align-items-center flex-wrap mb-1">
-              {technologies.map((technology: string) => {
-                return (
-                  <span
-                    key={uuid()}
-                    className="badge border-dashed border-code-green border-1 text-code-green fw-light rounded-pill me-1"
-                  >
-                    {technology}
-                  </span>
-                );
-              })}
-            </div>
-          ) : (
-            <></>
-          )}
-          <p className="fst-italic portfolio-description-block">
-            {description}
-          </p>
+    <div className="col-xl-6 mb-5">
+      <div className="portfolio-item-block">
+        <div className="d-flex align-items-center flex-wrap">
+          {images.map((img: Image) => {
+            const imgUuid = uuid();
+            return (
+              <img
+                key={imgUuid}
+                id={imgUuid}
+                src={img.src}
+                className="img portfolio-img-sneaky mb-3 me-3"
+                width={img.width ?? "380px"}
+                height={img.height ?? "210px"}
+                alt={img.alt}
+              />
+            );
+          })}
         </div>
+        <h3>{link != null ? <a href={link}>{title}</a> : title}</h3>
+        <div className="d-flex align-items-center justify-content-between">
+          <span>{type}</span>
+          <i>{year}</i>
+        </div>
+        <hr />
+        {technologies != null ? (
+          <div className="d-flex align-items-center flex-wrap mb-1">
+            {technologies.map((technology: string) => {
+              return (
+                <span
+                  key={uuid()}
+                  className={
+                    selectedTechnologies.includes(technology)
+                      ? "badge bg-code-green text-dark fw-light rounded-pill me-1"
+                      : "badge border-dashed border-code-green border-1 text-code-green fw-light rounded-pill me-1"
+                  }
+                >
+                  {technology}
+                </span>
+              );
+            })}
+          </div>
+        ) : (
+          <></>
+        )}
+        <p className="fst-italic portfolio-description-block">{description}</p>
       </div>
     </div>
   );
