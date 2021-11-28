@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
 import "./Portfolio.scss";
-import { Image } from "../common/CommonInterfaces";
+import { Image, IPortfolioItemInput } from "../common/CommonInterfaces";
 import { v4 as uuid } from "uuid";
-import { IPortfolioCollapseItemInput } from "./Portfolio";
-import { PortfolioContext } from "./PortfolioContext";
+import PortfolioContext from "./PortfolioContext";
 
-function PortfolioCollapseItem({
+function PortfolioItem({
   description,
   images = [],
   title,
@@ -13,12 +12,20 @@ function PortfolioCollapseItem({
   technologies,
   type,
   year,
-}: IPortfolioCollapseItemInput) {
+}: IPortfolioItemInput) {
   const { selectedTechnologies } = useContext(PortfolioContext);
-
   return (
-    <div className="col-xl-6 mb-5">
-      <div className="portfolio-item-block">
+    <div className={`col-xl-6 mb-5`}>
+      <div
+        className={`portfolio-item-block${
+          selectedTechnologies.length > 0 &&
+          !selectedTechnologies.some((technology) =>
+            technologies.includes(technology)
+          )
+            ? " hidden-skill"
+            : ""
+        }`}
+      >
         <div className="d-flex align-items-center flex-wrap">
           {images.map((img: Image) => {
             const imgUuid = uuid();
@@ -67,4 +74,4 @@ function PortfolioCollapseItem({
   );
 }
 
-export default PortfolioCollapseItem;
+export default PortfolioItem;

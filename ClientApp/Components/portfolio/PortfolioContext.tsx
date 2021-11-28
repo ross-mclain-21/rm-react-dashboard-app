@@ -1,3 +1,17 @@
-﻿import React, { SetStateAction } from "react";
+﻿import React, { Dispatch, SetStateAction } from "react";
 
-export const PortfolioContext = React.createContext<any>({});
+interface IPortfolioContext {
+  selectedTechnologies: string[];
+  setSelectedTechnologies: Dispatch<SetStateAction<string[]>>;
+}
+
+const defaultPortfolioContext = {
+  selectedTechnologies: [],
+  setSelectedTechnologies: () => {},
+};
+
+const PortfolioContext = React.createContext<IPortfolioContext>(
+  defaultPortfolioContext
+);
+
+export default PortfolioContext;

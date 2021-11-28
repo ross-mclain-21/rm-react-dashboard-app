@@ -4,3 +4,20 @@ export interface Image {
   width?: string;
   height?: string;
 }
+
+export interface IPortfolioItemInput {
+  description: string;
+  images: Image[];
+  title: string;
+  link?: string;
+  technologies: string[];
+  type: string;
+  year: number;
+}
+
+export interface IPortfolioSkillInput {
+  name: string;
+  slug: string;
+  icon: string;
+  prefix?: string;
+}

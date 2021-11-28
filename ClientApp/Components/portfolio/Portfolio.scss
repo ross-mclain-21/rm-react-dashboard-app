@@ -6,6 +6,10 @@
 }
 .portfolio-item-block {
   color:$coding-green-color;
+  
+  &.hidden-skill{
+    opacity: 0.5;
+  }
 }
 .portfolio-description-block{
   max-width: 500px;

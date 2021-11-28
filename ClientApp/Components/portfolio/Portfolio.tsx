@@ -1,38 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./Portfolio.scss";
-import PortfolioCollapseItem from "./PortfolioCollapseItem";
+import PortfolioItem from "./PortfolioItem";
 import { Button } from "react-bootstrap";
-import { Image } from "../common/CommonInterfaces";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PortfolioContext from "./PortfolioContext";
 import {
-  faBootstrap,
-  faCss3Alt,
-  faDocker,
-  faHtml5,
-  faJsSquare,
-  faNode,
-  faNodeJs,
-  faReact,
-  faSass,
-  faUnity,
-} from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
-import { PortfolioContext } from "./PortfolioContext";
-
-export interface IPortfolioCollapseItemInput {
-  description: string;
-  images: Image[];
-  title: string;
-  link?: string;
-  technologies: string[];
-  type: string;
-  year: number;
-}
+  IPortfolioItemInput,
+  IPortfolioSkillInput,
+} from "../common/CommonInterfaces";
+import PortfolioSkill from "./PortfolioSkillI";
 
 function Portfolio() {
   const [portfolioItemList, setPortfolioItemList] = useState([]);
+  const [portfolioSkillList, setPortfolioSkillList] = useState([]);
   const [selectedTechnologies, setSelectedTechnologies] = useState<string[]>(
     []
   );
@@ -41,7 +22,15 @@ function Portfolio() {
     axios.get("/assets/json/PortfolioItemList.json").then((res) => {
       setPortfolioItemList(res.data);
     });
+    axios.get("/assets/json/PortfolioSkillList.json").then((res) => {
+      console.log(res);
+      setPortfolioSkillList(res.data);
+    });
   }, []);
+
+  useEffect(() => {
+    console.log(selectedTechnologies);
+  }, [selectedTechnologies]);
 
   return (
     <PortfolioContext.Provider
@@ -57,60 +46,33 @@ function Portfolio() {
         <div className="row">
           <div className="col-xl-4 col-md-6">
             <div className="row portfolio-skill-list">
-              <div className="col-lg-4 portfolio-skill">
-                <FontAwesomeIcon icon={faHtml5} className="skill-icon" />
-              </div>
-              <div className="col-lg-4 portfolio-skill">
-                <FontAwesomeIcon icon={faCss3Alt} className="skill-icon" />
-              </div>
-              <div className="col-lg-4 portfolio-skill">
-                <FontAwesomeIcon icon={faJsSquare} className="skill-icon" />
-              </div>
-              <div className="col-lg-4 portfolio-skill">
-                <FontAwesomeIcon icon={faReact} className="skill-icon" />
-              </div>
-              <div className="col-lg-4 portfolio-skill">
-                <div className="skill-icon d-flex align-items-start">
-                  <span>C</span>
-                  <small>#</small>
-                </div>
-              </div>
-              <div className="col-lg-4 portfolio-skill">
-                <FontAwesomeIcon icon={faDatabase} className="skill-icon" />
-              </div>
-              <div className="col-lg-4 portfolio-skill">
-                <FontAwesomeIcon icon={faSass} className="skill-icon" />
-              </div>
-              <div className="col-lg-4 portfolio-skill">
-                <FontAwesomeIcon icon={faDocker} className="skill-icon" />
-              </div>
-              <div className="col-lg-4 portfolio-skill">
-                <FontAwesomeIcon icon={faBootstrap} className="skill-icon" />
-              </div>
-              <div className="col-lg-4 portfolio-skill">
-                <FontAwesomeIcon icon={faNode} className="skill-icon" />
-              </div>
-              <div className="col-lg-4 portfolio-skill">
-                <FontAwesomeIcon icon={faUnity} className="skill-icon" />
-              </div>
+              {portfolioSkillList.map(
+                (portfolioSkill: IPortfolioSkillInput) => (
+                  <PortfolioSkill
+                    key={uuid()}
+                    prefix={portfolioSkill.prefix}
+                    name={portfolioSkill.name}
+                    icon={portfolioSkill.icon}
+                    slug={portfolioSkill.slug}
+                  />
+                )
+              )}
             </div>
           </div>
           <div className="col-xl-8 col-md-6">
             <div className="row">
-              {portfolioItemList.map(
-                (portfolioItem: IPortfolioCollapseItemInput) => (
-                  <PortfolioCollapseItem
-                    key={uuid()}
-                    images={portfolioItem.images}
-                    title={portfolioItem.title}
-                    link={portfolioItem.link}
-                    year={portfolioItem.year}
-                    type={portfolioItem.type}
-                    technologies={portfolioItem.technologies}
-                    description={portfolioItem.description}
-                  />
-                )
-              )}
+              {portfolioItemList.map((portfolioItem: IPortfolioItemInput) => (
+                <PortfolioItem
+                  key={uuid()}
+                  images={portfolioItem.images}
+                  title={portfolioItem.title}
+                  link={portfolioItem.link}
+                  year={portfolioItem.year}
+                  type={portfolioItem.type}
+                  technologies={portfolioItem.technologies}
+                  description={portfolioItem.description}
+                />
+              ))}
             </div>
           </div>
         </div>
