@@ -53,7 +53,7 @@ function HomeDetail() {
         text={"rossmclain21"}
         faClasses="fa-1x"
         isLink={true}
-        link="www.linkedin.com/in/rossmclain21"
+        link="https://www.linkedin.com/in/rossmclain21"
       />
       <Button className="btn-outline-code-green mt-3" href="/portfolio">
         Portfolio
