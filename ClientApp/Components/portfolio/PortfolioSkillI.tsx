@@ -3,11 +3,9 @@ import "./Portfolio.scss";
 import PortfolioContext from "./PortfolioContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IPortfolioSkillInput } from "../common/CommonInterfaces";
-import { IconLookup } from "@fortawesome/free-brands-svg-icons";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import {
   findIconDefinition,
-  Icon,
   IconPrefix,
 } from "@fortawesome/fontawesome-svg-core";
 import { IconName } from "@fortawesome/free-regular-svg-icons";
@@ -24,28 +22,36 @@ function PortfolioSkill({ name, slug, icon, prefix }: IPortfolioSkillInput) {
         })
       : ({} as IconDefinition);
 
+  const skillSelected = selectedTechnologies.includes(slug)
+    ? "skill-selected"
+    : "";
+
   return (
     <div
-      className="col-lg-4 portfolio-skill"
-      onMouseEnter={() => {
+      className="p-3 portfolio-skill"
+      onClick={() => {
         if (!selectedTechnologies.includes(slug)) {
           selectedTechnologies.push(slug);
-          console.log(selectedTechnologies);
           setSelectedTechnologies([...selectedTechnologies]);
-        }
-      }}
-      onMouseLeave={() => {
-        if (selectedTechnologies.includes(slug)) {
+        } else {
           selectedTechnologies.splice(selectedTechnologies.indexOf(slug), 1);
           setSelectedTechnologies([...selectedTechnologies]);
         }
       }}
     >
-      {icon != null ? (
-        <FontAwesomeIcon icon={icoDefinition} className="skill-icon" />
-      ) : (
-        <span className="skill-icon">{name}</span>
-      )}
+      <div className="d-flex flex-column align-items-center justify-content-center">
+        {icon != null ? (
+          <FontAwesomeIcon
+            icon={icoDefinition}
+            className={`mb-2 skill-icon ${skillSelected}`}
+          />
+        ) : (
+          <span className={`skill-icon skill-text ${skillSelected}`}>
+            {name}
+          </span>
+        )}
+        <small>{name}</small>
+      </div>
     </div>
   );
 }

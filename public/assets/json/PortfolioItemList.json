@@ -2,7 +2,7 @@
   {
     "title": "This.Website",
     "description": "This is my newest application and a replacement for my previous personal website. I have worked on a few react apps but this is the first time I have delved into fully building it myself from the ground up. I have built it on top of ASP.Net Core and have it deploying automatically from github, using github actions, to digital ocean using docker.",
-    "technologies": ["JS", "React", "SCSS", "C#", "ASP.Net Core", "Docker"],
+    "technologies": ["HTML","CSS","JS","TS", "React", "SCSS", "C#","Node"],
     "type":"WEBSITE",
     "year": 2021,
     "images": [
@@ -13,9 +13,23 @@
     ]
   },
   {
+    "title": "Job Estimator",    
+    "link": "http://www.jobestimator.mclaindevelopment.com",
+    "description": "I created this for my dad to enable him to build out and track job estimates from the ground up. It allows for work items to be defined with an average time and also allows for overrides when unexpected circumstances arise.",
+    "technologies": ["HTML", "CSS", "JS","C#", "ASP.NET","Entity Framework","SQL"],
+    "type":"WEBSITE",
+    "year": 2021,
+    "images": [
+      {
+        "src": "/assets/images/portfolio/PersonalWebsite/jobestimator.png",
+        "alt": "Job Estimator"
+      }
+    ]
+  },
+  {
     "title": "Jordan Dube Portfolio",
     "description": "This is a website I created for my friend Jordan who needed a website that provided a central location for all links to his social media and other projects.",
-    "technologies": ["HTML", "CSS", "C#", "JS", "jQuery", "ASP.Net MVC"],
+    "technologies": ["HTML", "CSS", "JS","C#", "ASP.NET"],
     "type":"WEBSITE",
     "year": 2019,
     "images": [
@@ -28,16 +42,15 @@
   {
     "title": "Mclain.de",
     "link": "https://www.mclain.de/",
-    "description": "One of the many iterations of my personal website. I began it in 2018, building on my experience at Tyler Technologies. It is built using ASP.Net MVC with cshtml, JS/JQuery, CSS with an Entity Framework code first SQL database for authentication and data. I have since returned to it and updated it with more current projects and an updated resume. I also have used it as my platform for any little web app I want to spin up quickly for my own personal use or that of my friends. The website you are currently viewing is going to fully replace this legacy website.",
+    "description": "One of the many iterations of my personal website. I began it in 2018, building on my experience at Tyler Technologies. It is built using ASP.Net MVC with cshtml, JS/JQuery, CSS with an Entity Framework code first SQL database for authentication and data.",
     "technologies": [
       "HTML",
-      "C#",
       "CSS",
-      "jQuery",
-      "ASP.Net MVC",
-      "Entity Framework", 
       "JS",
-      "MSSQL"
+      "C#",
+      "ASP.NET",
+      "Entity Framework", 
+      "SQL"
     ],
     "type":"WEBSITE",
     "year": 2018,
@@ -73,10 +86,6 @@
       {
         "src": "/assets/images/portfolio/CelebrationAtTheos/celebrationattheos.png",
         "alt": "Celebration At Theos Landing Page"
-      },
-      {
-        "src": "/assets/images/portfolio/CelebrationAtTheos/getting stuff.png",
-        "alt": "Celebration At Theos Getting Stuff"
       }
     ]
   },
@@ -88,10 +97,6 @@
     "type":"VIDEO GAME",
     "year": 2016,
     "images": [
-      {
-        "src": "/assets/images/portfolio/Ballgame/landingpage.png",
-        "alt": "Ninja Runner Landing Page"
-      },
       {
         "src": "/assets/images/portfolio/Ballgame/running.png",
         "alt": "Ninja Runner Running"
@@ -106,10 +111,6 @@
     "type":"VIDEO GAME",
     "year": 2016,
     "images": [
-      {
-        "src": "/assets/images/portfolio/Crown And Country/landing page.png",
-        "alt": "King And County Landing Page"
-      },
       {
         "src": "/assets/images/portfolio/Crown And Country/Building.png",
         "alt": "King And County Building"

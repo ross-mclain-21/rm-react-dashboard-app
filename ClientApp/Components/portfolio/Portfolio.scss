@@ -26,14 +26,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom:1rem;
   }
   
   .skill-icon {
-    font-size: 6rem;
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
     cursor: pointer;
     &:hover{
       color:$coding-green-color-hover;
+    }
+    &.skill-selected{
+      color:$coding-red-color;
+      &:hover{
+        color:$coding-red-color-hover;
+      }
+    }
+    &.skill-text{
+      font-size: 3rem;
     }
   }
 }

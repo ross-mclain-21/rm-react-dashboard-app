@@ -18,6 +18,12 @@
     "prefix": "fab"
   },
   {
+    "name": "TypeScript",
+    "slug": "TS",
+    "icon": "file-code",
+    "prefix": "far"
+  },
+  {
     "name": "ReactJS",
     "slug": "React",
     "icon": "react",
@@ -26,8 +32,14 @@
   {
     "name": "C#",
     "slug": "C#",
-    "icon": null,
-    "prefix": null
+    "icon": "file-code",
+    "prefix": "fas"
+  },
+  {
+    "name": "ASP.NET",
+    "slug": "ASP.NET",
+    "icon": "microsoft",
+    "prefix": "fab"
   },
   {
     "name": "SQL",
@@ -36,15 +48,15 @@
     "prefix": "fas"
   },
   {
+    "name": "Entity Framework",
+    "slug": "Entity Framework",
+    "icon": "table",
+    "prefix": "fas"
+  },
+  {
     "name": "SASS",
     "slug": "SCSS",
     "icon": "sass",
-    "prefix": "fab"
-  },
-  {
-    "name": "Docker",
-    "slug": "Docker",
-    "icon": "docker",
     "prefix": "fab"
   },
   {
@@ -55,7 +67,7 @@
   },
   {
     "name": "NodeJS",
-    "slug": "NodeJS",
+    "slug": "Node",
     "icon": "node",
     "prefix": "fab"
   },
