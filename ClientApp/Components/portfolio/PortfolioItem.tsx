@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./Portfolio.scss";
 import { Image, IPortfolioItemInput } from "../common/CommonInterfaces";
-import { v4 as uuid } from "uuid";
 import PortfolioContext from "./PortfolioContext";
 import { motion } from "framer-motion";
 
@@ -48,14 +47,14 @@ function PortfolioItem({
               const techIncluded = selectedTechnologies.includes(technology);
               return (
                 <motion.span
-                  key={uuid()}
+                  key={technology}
                   initial={{ scale: 1 }}
                   animate={{ scale: techIncluded ? 1.1 : 1 }}
                   exit={{ scale: 1 }}
                   transition={{ duration: 0.3 }}
                   className={
                     techIncluded
-                      ? "badge bg-code-red fw-bold rounded-pill me-1 mb-2"
+                      ? "badge border-dashed border-code-red text-code-red fw-bold rounded-pill ms-1 me-2 mb-2"
                       : "badge border-dashed border-code-green border-1 text-code-green fw-light rounded-pill me-1 mb-2"
                   }
                 >
@@ -69,11 +68,10 @@ function PortfolioItem({
         )}
         <div className="d-flex align-items-center flex-wrap">
           {images.map((img: Image) => {
-            const imgUuid = uuid();
             return (
               <img
-                key={imgUuid}
-                id={imgUuid}
+                key={img.src}
+                id={img.src}
                 src={img.src}
                 className="img portfolio-img-sneaky mb-3 me-3"
                 width={img.width ?? "240px"}

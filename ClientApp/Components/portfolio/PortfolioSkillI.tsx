@@ -9,6 +9,7 @@ import {
   IconPrefix,
 } from "@fortawesome/fontawesome-svg-core";
 import { IconName } from "@fortawesome/free-regular-svg-icons";
+import { motion } from "framer-motion";
 
 function PortfolioSkill({ name, slug, icon, prefix }: IPortfolioSkillInput) {
   const { selectedTechnologies, setSelectedTechnologies } =
@@ -21,14 +22,12 @@ function PortfolioSkill({ name, slug, icon, prefix }: IPortfolioSkillInput) {
           iconName: icon as IconName,
         })
       : ({} as IconDefinition);
-
-  const skillSelected = selectedTechnologies.includes(slug)
-    ? "skill-selected"
-    : "";
+  const skillSelected = selectedTechnologies.includes(slug);
 
   return (
-    <div
-      className="p-3 portfolio-skill"
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      className="p-sm-2 p-1 portfolio-skill"
       onClick={() => {
         if (!selectedTechnologies.includes(slug)) {
           selectedTechnologies.push(slug);
@@ -43,16 +42,24 @@ function PortfolioSkill({ name, slug, icon, prefix }: IPortfolioSkillInput) {
         {icon != null ? (
           <FontAwesomeIcon
             icon={icoDefinition}
-            className={`mb-2 skill-icon ${skillSelected}`}
+            className={`mb-2 skill-icon ${
+              skillSelected ? "skill-selected" : ""
+            }`}
           />
         ) : (
-          <span className={`skill-icon skill-text ${skillSelected}`}>
+          <span
+            className={`skill-icon skill-text ${
+              skillSelected ? "skill-selected" : ""
+            }`}
+          >
             {name}
           </span>
         )}
-        <small>{name}</small>
+        <small className={`${skillSelected ? "text-code-red fw-bold" : ""}`}>
+          {name}
+        </small>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -3,14 +3,12 @@ import "./Portfolio.scss";
 import PortfolioItem from "./PortfolioItem";
 import { Button } from "react-bootstrap";
 import axios from "axios";
-import { v4 as uuid } from "uuid";
 import PortfolioContext from "./PortfolioContext";
 import {
   IPortfolioItemInput,
   IPortfolioSkillInput,
 } from "../common/CommonInterfaces";
 import PortfolioSkill from "./PortfolioSkillI";
-import { LayoutGroup, motion } from "framer-motion";
 
 function Portfolio() {
   const [portfolioItemList, setPortfolioItemList] = useState<
@@ -80,41 +78,44 @@ function Portfolio() {
       <div className="stars" />
       <div className="my-3 p-md-5 p-3">
         <div className="">
-          <Button className="btn-outline-code-green" href="/">
-            Return Home!
-          </Button>
-        </div>
-        <div className="">
-          <div className="d-flex align-items-center justify-content-center mt-3">
-            <p className="fw-bold mb-0">FILTER BY SKILLS I'VE ACQUIRED</p>
+          <div className="">
+            <Button className="btn-outline-code-green mb-4" href="/">
+              Return Home!
+            </Button>
           </div>
-          <div className="d-flex align-items-center justify-content-center flex-wrap portfolio-skill-list">
-            {portfolioSkillList.map((portfolioSkill: IPortfolioSkillInput) => (
-              <PortfolioSkill
-                key={uuid()}
-                prefix={portfolioSkill.prefix}
-                name={portfolioSkill.name}
-                icon={portfolioSkill.icon}
-                slug={portfolioSkill.slug}
-              />
-            ))}
-          </div>
-          <hr className="mb-5" />
-          <div className="row">
-            {[...portfolioItemList]
-              .sort(sortPortfolioItems)
-              .map((portfolioItem: IPortfolioItemInput) => (
-                <PortfolioItem
-                  key={portfolioItem.title}
-                  images={portfolioItem.images}
-                  title={portfolioItem.title}
-                  link={portfolioItem.link}
-                  year={portfolioItem.year}
-                  type={portfolioItem.type}
-                  technologies={portfolioItem.technologies}
-                  description={portfolioItem.description}
-                />
-              ))}
+          <div className="d-flex align-items-start flex-nowrap">
+            <div className="row">
+              {[...portfolioItemList]
+                .sort(sortPortfolioItems)
+                .map((portfolioItem: IPortfolioItemInput) => (
+                  <PortfolioItem
+                    key={portfolioItem.title}
+                    images={portfolioItem.images}
+                    title={portfolioItem.title}
+                    link={portfolioItem.link}
+                    year={portfolioItem.year}
+                    type={portfolioItem.type}
+                    technologies={portfolioItem.technologies}
+                    description={portfolioItem.description}
+                  />
+                ))}
+            </div>
+            <div className="ms-sm-4 ms-3 position-sticky top-0">
+              <p className="fw-bold small text-center">FILTER BY SKILLS</p>
+              <div className="d-flex flex-column align-items-center justify-content-center portfolio-skill-list ">
+                {portfolioSkillList.map(
+                  (portfolioSkill: IPortfolioSkillInput) => (
+                    <PortfolioSkill
+                      key={portfolioSkill.name}
+                      prefix={portfolioSkill.prefix}
+                      name={portfolioSkill.name}
+                      icon={portfolioSkill.icon}
+                      slug={portfolioSkill.slug}
+                    />
+                  )
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -26,12 +26,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    small{
+      font-size: 0.7rem;
+    }
+    
   }
   
   .skill-icon {
     display: flex;
     align-items: center;
-    font-size: 4rem;
+    font-size: 2.9rem;
     cursor: pointer;
     &:hover{
       color:$coding-green-color-hover;
@@ -43,7 +48,7 @@
       }
     }
     &.skill-text{
-      font-size: 3rem;
+      font-size: 2rem;
     }
   }
 }
@@ -52,5 +57,22 @@
 @media (max-width: $breakpoint-lg) {
   .portfolio-item-block{
     min-width: 200px;
+  }
+}
+@media (max-width: $breakpoint-sm) {
+  .portfolio-skill-list {
+    .portfolio-skill{
+      small{
+        font-size: 0.6rem;
+      }
+
+    }
+    .skill-icon {
+      font-size: 2.15rem;
+
+      &.skill-text{
+        font-size: 2rem;
+      }
+    }
   }
 }
