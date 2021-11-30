@@ -22,6 +22,7 @@
 
 .portfolio-skill-list{
   color:$coding-green-color;
+  overflow-y:auto;
   .portfolio-skill{
     display: flex;
     align-items: center;
