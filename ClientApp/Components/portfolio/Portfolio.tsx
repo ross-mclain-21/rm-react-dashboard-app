@@ -84,7 +84,7 @@ function Portfolio() {
             </Button>
           </div>
           <div className="d-flex align-items-start flex-nowrap">
-            <div className="row">
+            <div className="row portfolio-item-list">
               {[...portfolioItemList]
                 .sort(sortPortfolioItems)
                 .map((portfolioItem: IPortfolioItemInput) => (
@@ -100,7 +100,7 @@ function Portfolio() {
                   />
                 ))}
             </div>
-            <div className="ms-sm-4 ms-3 position-sticky top-0">
+            <div className="ms-sm-4 ms-3">
               <p className="fw-bold small text-center">FILTER</p>
               <div className="d-flex flex-column align-items-center justify-content-center portfolio-skill-list">
                 {portfolioSkillList.map(
