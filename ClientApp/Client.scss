@@ -2,6 +2,8 @@
 //global variables
 $coding-green-color: rgb(0, 255, 0);
 $coding-green-color-hover: rgb(0, 150, 0);
+$coding-red-color: #ff0000;
+$coding-red-color-hover:#950000;
 $background-color:#222;
 $breakpoint-sm:576px;
 $breakpoint-lg:992px;
@@ -17,7 +19,7 @@ $breakpoint-xl:1200px;
 
 body {
   background-color: $background-color !important;
-  color: white;
+  color: $coding-green-color;
   font-family: IBMPlexMono, serif !important;
   
 }
@@ -27,6 +29,10 @@ body {
   overflow-y:auto;
   display: flex;
   flex-direction: column;
+}
+
+hr{
+  color:$coding-green-color;
 }
 
 //bootstrap extensions
@@ -63,7 +69,17 @@ body {
   border-color:$coding-green-color;
 }
 
+//custom bg
 
+.bg-code-green{
+  background-color: $coding-green-color;
+  color:$background-color;
+}
+
+.bg-code-red{
+  background-color: $coding-red-color;
+  color:white;
+}
 
 //custom buttons
 .btn-code-green{

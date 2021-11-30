@@ -4,6 +4,13 @@
   border-left: 2px solid $coding-green-color;
   padding-left:3em;
 }
+.portfolio-item-block {
+  color:$coding-green-color;
+  
+  &.hidden-skill{
+    opacity: 0.5;
+  }
+}
 .portfolio-description-block{
   max-width: 500px;
 }
@@ -11,6 +18,34 @@
 .portfolio-img-sneaky{
   border:2px solid $coding-green-color;
   opacity: 0.7;
+}
+
+.portfolio-skill-list{
+  color:$coding-green-color;
+  .portfolio-skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .skill-icon {
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    cursor: pointer;
+    &:hover{
+      color:$coding-green-color-hover;
+    }
+    &.skill-selected{
+      color:$coding-red-color;
+      &:hover{
+        color:$coding-red-color-hover;
+      }
+    }
+    &.skill-text{
+      font-size: 3rem;
+    }
+  }
 }
 
 
