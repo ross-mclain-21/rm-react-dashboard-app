@@ -51,8 +51,11 @@ https://mclaindevelopment.com/
  
  <p>In order to actually make it that simple I of course had to build my components based on the selectedTechnologies array and both store it's state as well as share that state using the PortfolioContext. More specifically I defined a sort function in my Portfolio.tsx that runs before I map out all of my portolio items. This means that any change to selectedTechnologies automatically recomputes the sort and any change and only the change is reflected in the view. I also added checks based on the contextually stored selectedTechnologies in both PortfolioItem.tsx and PortfolioSkill.tsx to highlight themselves if they exist within the selectedTechnologies array.</p>
  
- <p>This shift in mentality and thinking has been extremely enlightening and enjoyable, and I plan to continue improving this application while my study of React best practice continues. Please feel free to reach out @mclain.development@gmail.com with any thoughts or feedback related to this application or my portfolio.</p> 
+ <p>This shift in mentality and thinking has been extremely enlightening and enjoyable, and I plan to continue improving this application while my study of React best practice continues.</p> 
  
  </div>
  
+Please feel free to reach out here: 
+[mclain.development@gmail.com](mailto:mclain.development@gmail.com)
+with any thoughts or feedback related to this application or my portfolio.
  
