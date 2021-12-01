@@ -10,6 +10,12 @@ $breakpoint-md:768px;
 $breakpoint-lg:992px;
 $breakpoint-xl:1200px;
 
+@font-face{
+  font-family: "PressStart2P";
+  src: local("PressStart2P"),
+  url("/public/sassAssets/fonts/PressStart2P-Regular.ttf") format("truetype");
+}
+
 //General Styling
 @font-face {
   font-family: "IBMPlexMono";

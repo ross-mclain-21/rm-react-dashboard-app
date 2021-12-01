@@ -1,17 +1,24 @@
 ﻿@import "ClientApp/Client.scss";
 
 .terminal-line {
-  top: 4px;
+  top: -4px;
 }
 
 .header-text {
-  font-size: 7rem;
+  font-size: 5.6rem;
+  font-family: PressStart2P,IBMPlexMono, serif !important;
+  text-align: center;
 }
 .header-chevron{
-  font-size:6em;
+  font-size:5.8rem;
+  margin-bottom: 9px;
+  font-family: PressStart2P,IBMPlexMono, serif !important;
+
 }
 .header-typewriter-dash{
   font-size:4em;
+  font-family: PressStart2P,IBMPlexMono, serif !important;
+
 }
 
 a {
@@ -37,15 +44,19 @@ a {
   }
 }
 
-@media (max-width: $breakpoint-lg) {
+@media (max-width: $breakpoint-xl) {
   .header-text{
-    font-size: 3em;
+    font-size: 2.6em;
   }
   .header-chevron{
-    font-size:2.5em;
+    font-size:2.9em;
+    margin-bottom: 4px;
   }
   .header-typewriter-dash{
     font-size:1.5em;
+  }
+  .terminal-line{
+    top:2px;
   }
 }
 
