@@ -15,7 +15,7 @@
   {
     "title": "Job Estimator",    
     "link": "http://www.jobestimator.mclaindevelopment.com",
-    "description": "I created this for my dad to enable him to build out and track job estimates from the ground up. It allows for work items to be defined with an average time and also allows for overrides when unexpected circumstances arise.",
+    "description": "I created this website for my dad to enable him to build out and track job estimates from the ground up. It allows for work items to be defined with an average time requirement and also allows for overrides when unexpected circumstances arise.",
     "technologies": ["HTML", "CSS", "JS","C#", "ASP.NET","Entity Framework","SQL"],
     "type":"WEBSITE",
     "year": 2021,
@@ -63,7 +63,6 @@
   },
   {
     "title": "Precision Collision Repair",
-    "link": "https://www.mclain.de/",
     "description": "My very first fully developed website. I was just coming off my 3rd year of college and a friend of mine from high-school knew I was in this field and asked if I could help him out with his company website! I made a simple website using straight html, css, and js and published it on GoDaddy.",
     "technologies": ["HTML", "CSS", "JS"],
     "type":"WEBSITE",
