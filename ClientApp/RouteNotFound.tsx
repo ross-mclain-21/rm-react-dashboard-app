@@ -15,10 +15,10 @@ function RouteNotFound() {
         return (
           <>
             <div className="stars" />
-            <div className="container d-flex align-items-center justify-content-center">
+            <div className="route-not-found-container d-flex align-items-center justify-content-center">
               <div className="row">
                 <div className="col-lg-6 d-lg-flex d-none d-flex flex-column align-items-center justify-content-center">
-                  <h1 className="four-oh-four-text fw-bold">404</h1>
+                  <h1 className="four-oh-four-text fw-bold p-sm-3">404</h1>
                   <Button
                     className="btn-outline-code-green d-lg-block d-none"
                     href="/"
