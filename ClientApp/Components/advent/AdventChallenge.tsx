@@ -58,12 +58,25 @@ function AdventChallenge() {
           key={selectedAdventData.id}
           className="d-flex flex-column flex-fill p-3"
         >
-          <h4 className="fw-bold">
-            {"[Day "}
-            {selectedAdventData.id}
-            {"] "}
-            {selectedAdventData.name}
-          </h4>
+          {selectedAdventData?.link != null ? (
+            <a
+              href={selectedAdventData?.link}
+              target="_blank"
+              className="h4 fw-bold"
+            >
+              {"[Day "}
+              {selectedAdventData.id}
+              {"] "}
+              {selectedAdventData.name}
+            </a>
+          ) : (
+            <h4 className="fw-bold">
+              {"[Day "}
+              {selectedAdventData.id}
+              {"] "}
+              {selectedAdventData.name}
+            </h4>
+          )}
           <div className="d-flex flex-column">
             <h5 className="mb-2">Problem Description:</h5>
             <p className="px-3 mb-3 white-space-pre-line small">

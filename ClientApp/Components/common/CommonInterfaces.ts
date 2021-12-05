@@ -29,4 +29,5 @@ export interface IAdventChallenge {
   description: string;
   input: number[];
   success?: boolean;
+  link?: string;
 }
