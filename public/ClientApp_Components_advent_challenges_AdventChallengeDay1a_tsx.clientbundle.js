@@ -14,13 +14,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Advent_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Advent.scss */ "./ClientApp/Components/advent/Advent.scss");
 /* harmony import */ var _AdventContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AdventContext */ "./ClientApp/Components/advent/AdventContext.tsx");
+/* harmony import */ var _data_AdventDataSource__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../data/AdventDataSource */ "./ClientApp/Components/advent/data/AdventDataSource.ts");
+
 
 
 
 
 function AdventChallengeDay1a() {
-  var _selectedAdventData$i;
-
   var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_AdventContext__WEBPACK_IMPORTED_MODULE_2__["default"]),
       selectedAdventData = _useContext.selectedAdventData;
 
@@ -36,11 +36,19 @@ function AdventChallengeDay1a() {
     className: "d-flex flex-column"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
     className: "mb-2"
+  }, "Problem Input:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "px-3 small"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "small data-box"
+  }, _data_AdventDataSource__WEBPACK_IMPORTED_MODULE_3__.adventDay1Data.join(", ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "d-flex flex-column"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
+    className: "mb-2"
   }, "Problem Solution:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "px-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "color-code-green"
-  }, "There are ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, solvePuzzle((_selectedAdventData$i = selectedAdventData === null || selectedAdventData === void 0 ? void 0 : selectedAdventData.input) !== null && _selectedAdventData$i !== void 0 ? _selectedAdventData$i : [])), " ", "measurements that are larger than the previous measurement."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "There are ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, solvePuzzle(_data_AdventDataSource__WEBPACK_IMPORTED_MODULE_3__.adventDay1Data)), " measurements that are larger than the previous measurement."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "d-flex flex-column mb-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
     className: "mb-2"
