@@ -30,5 +30,13 @@
     "description": "In addition to horizontal position and depth, you'll also need to track a third value, aim, which also starts at 0. The commands also mean something entirely different than you first thought:\n\ndown X increases your aim by X units.\nup X decreases your aim by X units.\nforward X does two things:\nIt increases your horizontal position by X units.\nIt increases your depth by your aim multiplied by X.\n\nNow, the above example does something different:\n\nforward 5 adds 5 to your horizontal position, a total of 5. Because your aim is 0, your depth does not change.\ndown 5 adds 5 to your aim, resulting in a value of 5.\nforward 8 adds 8 to your horizontal position, a total of 13. Because your aim is 5, your depth increases by 8*5=40.\nup 3 decreases your aim by 3, resulting in a value of 2.\ndown 8 adds 8 to your aim, resulting in a value of 10.\nforward 2 adds 2 to your horizontal position, a total of 15. Because your aim is 10, your depth increases by 2*10=20 to a total of 60.",
     "success": true,
     "link": "https://adventofcode.com/2021/day/2"
+  },
+  {
+    "id": 5,
+    "identifier": "3a",
+    "name": "Binary Diagnostic Part 1",
+    "description": "In addition to horizontal position and depth, you'll also need to track a third value, aim, which also starts at 0. The commands also mean something entirely different than you first thought:\n\ndown X increases your aim by X units.\nup X decreases your aim by X units.\nforward X does two things:\nIt increases your horizontal position by X units.\nIt increases your depth by your aim multiplied by X.\n\nNow, the above example does something different:\n\nforward 5 adds 5 to your horizontal position, a total of 5. Because your aim is 0, your depth does not change.\ndown 5 adds 5 to your aim, resulting in a value of 5.\nforward 8 adds 8 to your horizontal position, a total of 13. Because your aim is 5, your depth increases by 8*5=40.\nup 3 decreases your aim by 3, resulting in a value of 2.\ndown 8 adds 8 to your aim, resulting in a value of 10.\nforward 2 adds 2 to your horizontal position, a total of 15. Because your aim is 10, your depth increases by 2*10=20 to a total of 60.",
+    "success": true,
+    "link": "https://adventofcode.com/2021/day/3"
   }
 ]
