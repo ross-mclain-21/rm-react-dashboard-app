@@ -63,7 +63,7 @@ function HomeDetail() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3 }}
+        transition={{ duration: 1 }}
         className="col-md-6 d-flex flex-column align-items-center pt-md-2 pt-4"
       >
         <div className="d-flex flex-column">
