@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "../Advent.scss";
 import AdventContext from "../AdventContext";
+import { adventDay1Data } from "../data/AdventDataSource";
 
 function AdventChallengeDay1b() {
   const { selectedAdventData } = useContext(AdventContext);
@@ -19,12 +20,18 @@ function AdventChallengeDay1b() {
   return (
     <div className="flex-fill">
       <div className="d-flex flex-column">
+        <h5 className="mb-2">Problem Input:</h5>
+        <div className="px-3 small">
+          <p className="small data-box">{adventDay1Data.join(", ")}</p>
+        </div>
+      </div>
+      <div className="d-flex flex-column">
         <h5 className="mb-2">Problem Solution:</h5>
         <div className="px-3">
           <p className="color-code-green">
-            There are <b>{solvePuzzle(selectedAdventData?.input ?? [])}</b>{" "}
-            larger "window" measurements when grouping the data by 3 concurrent
-            data points instead of checking each item separately.
+            There are <b>{solvePuzzle(adventDay1Data)}</b> larger "window"
+            measurements when grouping the data by 3 concurrent data points
+            instead of checking each item separately.
           </p>
         </div>
       </div>

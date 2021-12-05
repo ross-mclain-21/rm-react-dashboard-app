@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "../Advent.scss";
 import AdventContext from "../AdventContext";
+import { adventDay1Data } from "../data/AdventDataSource";
 
 function AdventChallengeDay1a() {
   const { selectedAdventData } = useContext(AdventContext);
@@ -11,11 +12,17 @@ function AdventChallengeDay1a() {
   return (
     <div className="flex-fill">
       <div className="d-flex flex-column">
+        <h5 className="mb-2">Problem Input:</h5>
+        <div className="px-3 small">
+          <p className="small data-box">{adventDay1Data.join(", ")}</p>
+        </div>
+      </div>
+      <div className="d-flex flex-column">
         <h5 className="mb-2">Problem Solution:</h5>
         <div className="px-3">
           <p className="color-code-green">
-            There are <b>{solvePuzzle(selectedAdventData?.input ?? [])}</b>{" "}
-            measurements that are larger than the previous measurement.
+            There are <b>{solvePuzzle(adventDay1Data)}</b> measurements that are
+            larger than the previous measurement.
           </p>
         </div>
       </div>

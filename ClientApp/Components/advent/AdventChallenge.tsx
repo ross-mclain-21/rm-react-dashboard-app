@@ -3,6 +3,8 @@ import "./Advent.scss";
 import { useParams } from "react-router";
 import AdventContext from "./AdventContext";
 import { Button } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function AdventChallenge() {
   let params = useParams();
@@ -64,38 +66,34 @@ function AdventChallenge() {
           key={selectedAdventData.id}
           className="d-flex flex-column flex-fill p-3"
         >
+          <p className="mb-2">
+            <span>
+              {"[Problem "}
+              {selectedAdventData.identifier}
+              {"] "}
+            </span>
+            {selectedAdventData?.success ? (
+              <FontAwesomeIcon icon={faStar} className="gold-star" />
+            ) : (
+              <></>
+            )}
+          </p>
           {selectedAdventData?.link != null ? (
             <a
               href={selectedAdventData?.link}
               target="_blank"
               className="h4 fw-bold"
             >
-              {"[Day "}
-              {selectedAdventData.id}
-              {"] "}
               {selectedAdventData.name}
             </a>
           ) : (
-            <h4 className="fw-bold">
-              {"[Day "}
-              {selectedAdventData.id}
-              {"] "}
-              {selectedAdventData.name}
-            </h4>
+            <h4 className="fw-bold">{selectedAdventData.name}</h4>
           )}
-          <div className="d-flex flex-column">
+          <div className="d-flex flex-column mt-2">
             <h5 className="mb-2">Problem Description:</h5>
             <p className="px-3 mb-3 white-space-pre-line small">
               {selectedAdventData.description}
             </p>
-          </div>
-          <div className="d-flex flex-column">
-            <h5 className="mb-2">Problem Input:</h5>
-            <div className="px-3 small">
-              <p className="small data-box">
-                {selectedAdventData.input.join(", ")}
-              </p>
-            </div>
           </div>
 
           <div className="d-flex flex-column">

@@ -124,6 +124,7 @@ hr {
 .btn-code-red{
   @extend .btn-danger;
   background-color: $coding-red-color;
+  color:$background-color;
 
   &:hover{
     background-color: $coding-red-color-hover;

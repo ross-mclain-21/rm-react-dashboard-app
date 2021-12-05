@@ -12,10 +12,20 @@
 .advent-container{
   @extend .container;
   color:$coding-red-color;
+  
+  a:not(.btn){
+    color:$coding-red-color;
+    &:hover{
+      color:$coding-red-color-hover;
+    }
+  }
 }
 
 .advent-index {
   font-size: 1.5rem;
+}
+.gold-star{
+  color:gold;
 }
 .code{
   padding-top:10px;
