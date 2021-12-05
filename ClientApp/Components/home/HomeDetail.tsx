@@ -76,7 +76,6 @@ function HomeDetail() {
           <Button className="btn-outline-code-red mb-3" href="/advent">
             Advent of Code 2021
           </Button>
-          zi
         </div>
       </motion.div>
     </div>

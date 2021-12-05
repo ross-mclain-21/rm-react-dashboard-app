@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 import axios from "axios";
 import { IAdventChallenge } from "../common/CommonInterfaces";
 import AdventContext from "./AdventContext";
+import { motion } from "framer-motion";
 
 function Advent() {
   let params = useParams();
@@ -59,56 +60,60 @@ function Advent() {
       }}
     >
       <div className="advent-container d-flex flex-column flex-fill p-md-5 p-3">
-        <div className="mb-5">
-          <Button className="btn-outline-code-red" href="/">
-            Return Home!
-          </Button>
-        </div>
-        <div className="">
-          <h1 className="header-text-sm">Advent of Code 2021</h1>
-          <div className="d-flex flex-column align-items-center justify-content-center p-3">
-            <a href="https://adventofcode.com/2021/about" className="mb-3">
-              https://adventofcode.com/2021/about
-            </a>
-            <p>
-              Advent of Code is an Advent calendar of small programming puzzles
-              for a variety of skill sets and skill levels that can be solved in
-              any programming language. I personally am solving them in js and
-              displaying them here. The next puzzle unlocks on each day of
-              december and when I accomplish them I will update this page!
-            </p>
-          </div>
-        </div>
+        {adventId == null ? (
+          <>
+            <div className="mb-5">
+              <Button className="btn-outline-code-red" href="/">
+                Return Home!
+              </Button>
+            </div>
+            <h1 className="header-text-sm">Advent of Code 2021</h1>
+            <div className="d-flex flex-column align-items-center justify-content-center p-3">
+              <a href="https://adventofcode.com/2021/about" className="mb-3">
+                https://adventofcode.com/2021/about
+              </a>
+              <p className="mb-0">
+                Advent of Code is an Advent calendar of small programming
+                puzzles for a variety of skill sets and skill levels that can be
+                solved in any programming language. I personally am solving them
+                in js and displaying them here. The next puzzle unlocks on each
+                day of december and when I accomplish them I will update this
+                page!
+              </p>
+            </div>
 
-        <div className="p-3">
-          <h5>Accomplished Puzzles:</h5>
-          <div className="row">
-            {adventData.map((value) => {
-              return (
-                <div
-                  key={value.identifier}
-                  className="col-md-1 col-sm-3 col-4 mb-3 d-flex align-items-center justify-content-center"
-                >
-                  <a
-                    href={
-                      adventId === value.id.toString()
-                        ? "/advent/"
-                        : `/advent/${value.id}`
-                    }
-                    className={`btn ${
-                      adventId === value.id.toString()
-                        ? "btn-code-green"
-                        : "btn-code-red"
-                    } rounded advent-index flex-fill`}
-                  >
-                    {value.identifier}
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
+            <div className="px-3">
+              <h5>Accomplished Puzzles:</h5>
+              <div className="row">
+                {adventData.map((value) => {
+                  return (
+                    <div
+                      key={value.identifier}
+                      className="col-md-1 col-sm-3 col-4 mb-3 d-flex align-items-center justify-content-center"
+                    >
+                      <a
+                        href={
+                          adventId === value.id.toString()
+                            ? "/advent/"
+                            : `/advent/${value.id}`
+                        }
+                        className={`btn ${
+                          adventId === value.id.toString()
+                            ? "btn-code-green"
+                            : "btn-code-red"
+                        } rounded advent-index flex-fill`}
+                      >
+                        {value.identifier}
+                      </a>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
         <Outlet />
       </div>
     </AdventContext.Provider>

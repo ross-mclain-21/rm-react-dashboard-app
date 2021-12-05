@@ -2,6 +2,7 @@ import React, { lazy, useContext, useEffect, useState } from "react";
 import "./Advent.scss";
 import { useParams } from "react-router";
 import AdventContext from "./AdventContext";
+import { Button } from "react-bootstrap";
 
 function AdventChallenge() {
   let params = useParams();
@@ -51,6 +52,11 @@ function AdventChallenge() {
 
   return (
     <>
+      <div className="mb-3">
+        <Button className="btn-outline-code-red" href="/advent">
+          Return To Puzzles!
+        </Button>
+      </div>
       {selectedAdventData == null ? (
         <></>
       ) : (

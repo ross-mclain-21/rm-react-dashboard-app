@@ -57,9 +57,9 @@ function AdventChallengeDay1b() {
               Use Array.prototype.reduce() to use built-in functionality to add
               to the accumulated int if the sum of the first "window" aka 3
               concurrent data points for ex. A (151, 152, 153) was less than the
-              sum of the second "window" one index to the right for ex. B (152,
-              153, 158). In this example it is clear that the sum of A is less
-              than B so that "window is marked as an increase!
+              sum of the second "window" one index to the right B (152, 153,
+              158). In this example it is clear that the sum of A is less than B
+              so that "window is marked as an increase!
             </li>
             <li>
               This code only loops once through the array making this solution
