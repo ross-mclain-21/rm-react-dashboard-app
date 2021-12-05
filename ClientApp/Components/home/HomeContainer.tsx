@@ -4,7 +4,7 @@ import HomeDetail from "./HomeDetail";
 
 function HomeContainer() {
   return (
-    <div className="container d-flex flex-column align-items-center justify-content-center">
+    <div className="container d-flex flex-column justify-content-center">
       <HomeHeader />
       <HomeDetail />
     </div>

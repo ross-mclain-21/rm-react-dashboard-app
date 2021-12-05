@@ -6,16 +6,16 @@ name: Trigger DigitalOcean App Deploy
 # or API.
 on:
   workflow_dispatch:
-    
+
 jobs:
   deployment:
     runs-on: ubuntu-latest
-    
+
     steps:
-    # Runs a single command using the runners shell
-    - name: HTTP Request Action
-      uses: fjogeleit/http-request-action@v1.8.1
-      with:
-        url: https://api.digitalocean.com/v2/apps/628173a3-b761-4bca-bcfb-5a8370726f5c/deployments
-        method: 'POST'
-        bearerToken: ${{ secrets.DIGITALOCEAN_TOKEN }}
+      # Runs a single command using the runners shell
+      - name: HTTP Request Action
+        uses: fjogeleit/http-request-action@v1.8.1
+        with:
+          url: https://api.digitalocean.com/v2/apps/628173a3-b761-4bca-bcfb-5a8370726f5c/deployments
+          method: "POST"
+          bearerToken: ${{ secrets.DIGITALOCEAN_TOKEN }}

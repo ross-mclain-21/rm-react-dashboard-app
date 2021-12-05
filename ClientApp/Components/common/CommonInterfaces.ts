@@ -21,3 +21,12 @@ export interface IPortfolioSkillInput {
   icon: string;
   prefix?: string;
 }
+
+export interface IAdventChallenge {
+  id: number;
+  identifier: string;
+  name: string;
+  description: string;
+  input: number[];
+  success?: boolean;
+}

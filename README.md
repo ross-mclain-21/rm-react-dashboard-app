@@ -58,4 +58,3 @@ https://mclaindevelopment.com/
 Please feel free to reach out here: 
 [mclain.development@gmail.com](mailto:mclain.development@gmail.com)
 with any thoughts or feedback related to this application or my portfolio.
- 

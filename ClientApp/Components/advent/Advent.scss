@@ -1,0 +1,33 @@
+@import "../home/Home";
+
+.header-text-sm {
+  color:$coding-red-color;
+  font-size: 3rem;
+  font-family: PressStart2P,IBMPlexMono, serif !important;
+  text-align: center;
+
+  border-bottom: 1px solid $coding-red-color;
+}
+
+.advent-container{
+  @extend .container;
+  color:$coding-red-color;
+}
+
+.advent-index {
+  font-size: 1.5rem;
+}
+.code{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.white-space-pre-line{
+  white-space: pre-line;
+}
+.data-box {
+  color:$coding-red-color;
+  padding: 15px;
+  border: 1px dashed $coding-red-color;
+  max-height: 150px;
+  overflow-y: auto;
+}

@@ -1,4 +1,4 @@
-﻿@import "ClientApp/Client.scss";
+﻿@import "../../App";
 
 .terminal-line {
   top: -4px;
@@ -6,24 +6,24 @@
 
 .header-text {
   font-size: 5.6rem;
-  font-family: PressStart2P,IBMPlexMono, serif !important;
+  font-family: PressStart2P, IBMPlexMono, serif !important;
   text-align: center;
 }
-.header-chevron{
-  font-size:5.8rem;
+.header-chevron {
+  font-size: 5.8rem;
   margin-bottom: 9px;
-  font-family: PressStart2P,IBMPlexMono, serif !important;
+  font-family: PressStart2P, IBMPlexMono, serif !important;
 }
-.header-typewriter-dash{
-  font-size:4em;
-  font-family: PressStart2P,IBMPlexMono, serif !important;
+.header-typewriter-dash {
+  font-size: 4em;
+  font-family: PressStart2P, IBMPlexMono, serif !important;
 }
 
 a {
-  color: $coding-green-color !important;
+  color: $coding-green-color;
 
   &:hover {
-    color: $coding-green-color-hover !important;
+    color: $coding-green-color-hover;
   }
 }
 
@@ -43,34 +43,34 @@ a {
 }
 
 @media (max-width: $breakpoint-xl) {
-  .header-text{
+  .header-text {
     font-size: 2.6em;
   }
-  .header-chevron{
-    font-size:2.9em;
+  .header-chevron {
+    font-size: 2.9em;
     margin-bottom: 4px;
   }
-  .header-typewriter-dash{
-    font-size:1.5em;
+  .header-typewriter-dash {
+    font-size: 1.5em;
   }
-  .terminal-line{
-    top:2px;
+  .terminal-line {
+    top: 2px;
   }
 }
 
 @media (max-width: $breakpoint-sm) {
-  .header-text{
+  .header-text {
     font-size: 2.6em;
     border-bottom: 1px solid $coding-green-color;
   }
-  .header-chevron{
+  .header-chevron {
     display: none;
   }
-  .header-typewriter-dash{
+  .header-typewriter-dash {
     display: none;
   }
-  
-  span{
+
+  span {
     font-size: 0.75em;
   }
 }

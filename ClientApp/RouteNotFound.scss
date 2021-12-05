@@ -1,4 +1,4 @@
-﻿@import "ClientApp/Client.scss";
+﻿@import "App";
 
 .route-not-found-container {
   @extend .container;
@@ -7,5 +7,5 @@
 
 .four-oh-four-text {
   font-size: 7em;
-  font-family: PressStart2P,IBMPlexMono, serif !important;
+  font-family: PressStart2P, IBMPlexMono, serif !important;
 }

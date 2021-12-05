@@ -8,7 +8,10 @@ import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 function Resume() {
   const [numPages, setNumPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
-  const resumePath = process.env.REACT_APP_DEVELOPMENT_ENVIRONMENT == 'development'?'/assets/files/resume.pdf':'https://mc-development.nyc3.digitaloceanspaces.com/resume.pdf';
+  const resumePath =
+    process.env.REACT_APP_DEVELOPMENT_ENVIRONMENT == "development"
+      ? "/assets/files/resume.pdf"
+      : "https://mc-development.nyc3.digitaloceanspaces.com/resume.pdf";
 
   function onDocumentLoadSuccess(pdf: SetStateAction<any>) {
     try {
@@ -35,7 +38,7 @@ function Resume() {
 
     window.addEventListener("resize", handleResize);
   }, []);
-  
+
   return (
     <>
       <div className="stars" />

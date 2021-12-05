@@ -5,7 +5,7 @@ import TypeWriter from "../common/TypeWriter";
 
 function HomeHeader() {
   return (
-    <div className="d-flex align-items-center mb-3">
+    <div className="d-flex align-items-center justify-content-center mb-3">
       <FontAwesomeIcon icon={faChevronRight} className="header-chevron" />
       <TypeWriter
         message={"Ross McLain"}
