@@ -30,7 +30,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function AdventChallengeDay1b() {
+function AdventChallengeDay3a() {
   var solvePuzzle = function solvePuzzle(inputData) {
     var indicesMap = new Map();
     var gammaRate = "";
@@ -98,7 +98,7 @@ function AdventChallengeDay1b() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Take in binary code input array as :", "<string>[]", "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Loop over each binary number, turning it into a char array and adding each bit to a map of", " ", "<index, array of bits at that index across all binary numbers>", "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Once we have a map of all bits at each index, we can then determine how many 0s, and from that how many 1s there are at each index."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "For the gammaRate we want 0 or 1 depending on which bit is", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "most"), " prevalent."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "For the epsilonRate we want 0 or 1 depending on which bit is", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "least"), " prevalent."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "This code loops once through the initial array to make the map, then uses reduce on each array based on the length of the binary code. Making this solution in Big O notation:", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "N + (N * C) which should reduce down to 2N"))))));
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdventChallengeDay1b);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdventChallengeDay3a);
 
 /***/ })
 

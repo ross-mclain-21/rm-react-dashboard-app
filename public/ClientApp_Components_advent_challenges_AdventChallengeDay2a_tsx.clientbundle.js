@@ -30,7 +30,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function AdventChallengeDay1b() {
+function AdventChallengeDay2a() {
   var solvePuzzle = function solvePuzzle(inputData) {
     var horizontalPosition = 0;
     var depth = 0;
@@ -96,7 +96,7 @@ function AdventChallengeDay1b() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Take in input array as :", "<string,number>[]", "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Loop over each command and add forward or up/down to the depth."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "This code only loops once through the array making this solution in Big O notation:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "N"))))));
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdventChallengeDay1b);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AdventChallengeDay2a);
 
 /***/ })
 
