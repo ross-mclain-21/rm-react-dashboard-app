@@ -7,7 +7,6 @@ import {
   faHashtag,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 function HomeDetail() {
@@ -67,15 +66,15 @@ function HomeDetail() {
         className="col-md-6 d-flex flex-column align-items-center pt-md-2 pt-4"
       >
         <div className="d-flex flex-column">
-          <Button className="btn-outline-code-green mb-3" href="/portfolio">
+          <a className="btn btn-outline-code-green mb-3" href="/portfolio">
             Portfolio
-          </Button>
-          <Button className="btn-outline-code-green mb-3" href="/resume">
+          </a>
+          <a className="btn btn-outline-code-green mb-3" href="/resume">
             Resume
-          </Button>
-          <Button className="btn-outline-code-red mb-3" href="/advent">
+          </a>
+          <a className="btn btn-outline-code-red mb-3" href="/advent">
             Advent of Code 2021
-          </Button>
+          </a>
         </div>
       </motion.div>
     </div>

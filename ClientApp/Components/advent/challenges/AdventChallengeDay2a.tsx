@@ -3,7 +3,7 @@ import "../Advent.scss";
 import AdventContext from "../AdventContext";
 import { adventDay2Data, IAdventDay2Data } from "../data/AdventDataSource";
 
-function AdventChallengeDay1b() {
+function AdventChallengeDay2a() {
   const solvePuzzle = (inputData: IAdventDay2Data[]) => {
     let horizontalPosition: number = 0;
     let depth: number = 0;
@@ -93,4 +93,4 @@ function AdventChallengeDay1b() {
   );
 }
 
-export default AdventChallengeDay1b;
+export default AdventChallengeDay2a;

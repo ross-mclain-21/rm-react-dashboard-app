@@ -7,7 +7,7 @@ import {
   IAdventDay2Data,
 } from "../data/AdventDataSource";
 
-function AdventChallengeDay1b() {
+function AdventChallengeDay3a() {
   const solvePuzzle = (inputData: string[]) => {
     const indicesMap = new Map<number, number[]>();
     let gammaRate = "";
@@ -117,4 +117,4 @@ function AdventChallengeDay1b() {
   );
 }
 
-export default AdventChallengeDay1b;
+export default AdventChallengeDay3a;

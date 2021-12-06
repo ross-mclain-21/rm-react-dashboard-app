@@ -38,5 +38,13 @@
     "description": "In addition to horizontal position and depth, you'll also need to track a third value, aim, which also starts at 0. The commands also mean something entirely different than you first thought:\n\ndown X increases your aim by X units.\nup X decreases your aim by X units.\nforward X does two things:\nIt increases your horizontal position by X units.\nIt increases your depth by your aim multiplied by X.\n\nNow, the above example does something different:\n\nforward 5 adds 5 to your horizontal position, a total of 5. Because your aim is 0, your depth does not change.\ndown 5 adds 5 to your aim, resulting in a value of 5.\nforward 8 adds 8 to your horizontal position, a total of 13. Because your aim is 5, your depth increases by 8*5=40.\nup 3 decreases your aim by 3, resulting in a value of 2.\ndown 8 adds 8 to your aim, resulting in a value of 10.\nforward 2 adds 2 to your horizontal position, a total of 15. Because your aim is 10, your depth increases by 2*10=20 to a total of 60.",
     "success": true,
     "link": "https://adventofcode.com/2021/day/3"
+  },
+  {
+    "id": 6,
+    "identifier": "3b",
+    "name": "Binary Diagnostic Part 2",
+    "description": "Next, you should verify the life support rating, which can be determined by multiplying the oxygen generator rating by the CO2 scrubber rating.\n\nBoth the oxygen generator rating and the CO2 scrubber rating are values that can be found in your diagnostic report - finding them is the tricky part. Both values are located using a similar process that involves filtering out values until only one remains. Before searching for either rating value, start with the full list of binary numbers from your diagnostic report and consider just the first bit of those numbers. Then:\n\nKeep only numbers selected by the bit criteria for the type of rating value for which you are searching. Discard numbers which do not match the bit criteria.\nIf you only have one number left, stop; this is the rating value for which you are searching.\nOtherwise, repeat the process, considering the next bit to the right.\nThe bit criteria depends on which type of rating value you want to find:\n\nTo find oxygen generator rating, determine the most common value (0 or 1) in the current bit position, and keep only numbers with that bit in that position. If 0 and 1 are equally common, keep values with a 1 in the position being considered.\nTo find CO2 scrubber rating, determine the least common value (0 or 1) in the current bit position, and keep only numbers with that bit in that position. If 0 and 1 are equally common, keep values with a 0 in the position being considered.",
+    "success": true,
+    "link": "https://adventofcode.com/2021/day/3"
   }
 ]
