@@ -11,21 +11,27 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
+import TopNavigation from "./Components/common/TopNavigation";
 
 function App() {
   library.add(fab, fas, far);
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Portfolio" element={<Portfolio />} />
-        <Route path="/Resume" element={<Resume />} />
-        <Route path="/Advent" element={<Advent />}>
-          <Route path=":adventId" element={<AdventChallenge />} />
-        </Route>
-        <Route path="*" element={<RouteNotFound />} />
-      </Routes>
-    </Router>
+    <>
+      <div className="stars" />
+      <TopNavigation />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Portfolio" element={<Portfolio />} />
+          <Route path="/Resume" element={<Resume />} />
+          <Route path="/Advent" element={<Advent />}>
+            <Route path=":adventId" element={<AdventChallenge />} />
+          </Route>
+          <Route path="*" element={<RouteNotFound />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

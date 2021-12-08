@@ -43,6 +43,17 @@ hr {
   color: $coding-green-color;
 }
 
+.top-navigation{
+  padding: 15px;
+}
+
+.user-avatar-name{
+  overflow-x:hidden;
+}
+.user-avatar-img{
+  border-radius:50%;
+}
+
 //bootstrap extensions
 .container {
   @extend .container;

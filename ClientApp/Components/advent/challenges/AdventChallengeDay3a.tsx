@@ -1,11 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../Advent.scss";
-import AdventContext from "../AdventContext";
-import {
-  adventDay2Data,
-  adventDay3Data,
-  IAdventDay2Data,
-} from "../data/AdventDataSource";
+import { adventDay3Data } from "../data/AdventDataSource";
 
 function AdventChallengeDay3a() {
   const solvePuzzle = (inputData: string[]) => {

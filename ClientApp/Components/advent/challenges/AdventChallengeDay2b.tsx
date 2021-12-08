@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../Advent.scss";
-import AdventContext from "../AdventContext";
 import { adventDay2Data, IAdventDay2Data } from "../data/AdventDataSource";
 
 function AdventChallengeDay2b() {

@@ -4,6 +4,7 @@
   "description": "",
   "main": "ClientApp/Index.tsx",
   "dependencies": {
+    "@auth0/auth0-react": "^1.8.0",
     "@babel/core": "^7.15.8",
     "@babel/plugin-proposal-decorators": "^7.15.8",
     "@babel/plugin-proposal-export-namespace-from": "^7.14.5",
@@ -28,6 +29,8 @@
     "cache-base": "^4.0.0",
     "cpx": "^1.5.0",
     "css-loader": "^6.5.0",
+    "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0",
     "express": "^4.17.1",
     "framer-motion": "^5.3.3",
     "glob-parent": "^6.0.2",
@@ -69,6 +72,7 @@
   },
   "scripts": {
     "test": "jest --passWithNoTests",
+    "build:dev": "env-cmd -f .env.development npm run start:dev",
     "start:dev": "webpack serve --hot --config webpack.client.js",
     "dev:build-server": "webpack --config webpack.server.js",
     "dev:build-client": "webpack --config webpack.client.js",

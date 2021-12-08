@@ -24,6 +24,10 @@
 .advent-index {
   font-size: 1.5rem;
 }
+.bingo-board{
+  border:1px solid $coding-red-color;
+}
+
 .gold-star{
   color:gold;
 }
@@ -40,4 +44,8 @@
   border: 1px dashed $coding-red-color;
   max-height: 150px;
   overflow-y: auto;
+  
+  &.data-box-lg{
+    max-height: 400px;
+  }
 }

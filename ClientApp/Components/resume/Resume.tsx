@@ -41,7 +41,6 @@ function Resume() {
 
   return (
     <>
-      <div className="stars" />
       <div className="container d-flex flex-column align-items-center justify-content-center my-5">
         <div className="my-3">
           <Button className="btn-outline-code-green mb-4" href="/">

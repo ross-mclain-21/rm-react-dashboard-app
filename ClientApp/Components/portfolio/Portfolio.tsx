@@ -75,7 +75,6 @@ function Portfolio() {
     <PortfolioContext.Provider
       value={{ selectedTechnologies, setSelectedTechnologies }}
     >
-      <div className="stars" />
       <div className="my-3 p-md-5 p-3">
         <div className="">
           <div className="">

@@ -69,7 +69,11 @@ function Advent() {
             </div>
             <h1 className="header-text-sm">Advent of Code 2021</h1>
             <div className="d-flex flex-column align-items-center justify-content-center p-3">
-              <a href="https://adventofcode.com/2021/about" className="mb-3">
+              <a
+                href="https://adventofcode.com/2021/about"
+                target="_blank"
+                className="mb-3"
+              >
                 https://adventofcode.com/2021/about
               </a>
               <p className="mb-0">

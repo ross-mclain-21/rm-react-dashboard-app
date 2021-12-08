@@ -8,7 +8,6 @@ import { Button } from "react-bootstrap";
 function RouteNotFound() {
   return (
     <>
-      <div className="stars" />
       <div className="route-not-found-container d-flex align-items-center justify-content-center">
         <div className="row">
           <div className="col-lg-6 d-lg-flex d-none d-flex flex-column align-items-center justify-content-center">

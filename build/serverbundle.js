@@ -77,7 +77,7 @@
                 {
                   to: "/login",
                 },
-                "Login"
+                "LoginButton"
               )
             ),
             /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
@@ -443,7 +443,7 @@
 
     /***/ "./ClientApp/Components/common/Login.js":
       /*!**********************************************!*\
-  !*** ./ClientApp/Components/common/Login.js ***!
+  !*** ./ClientApp/Components/common/LoginButton.js ***!
   \**********************************************/
       /***/ (
         __unused_webpack_module,
@@ -469,7 +469,7 @@
             /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(
               "h2",
               null,
-              "Login Page Place Holder"
+              "LoginButton Page Place Holder"
             )
           );
         }
@@ -1677,7 +1677,7 @@
           );
         /* harmony import */ var _Components_common_Login__WEBPACK_IMPORTED_MODULE_4__ =
           __webpack_require__(
-            /*! ./Components/common/Login */ "./ClientApp/Components/common/Login.js"
+            /*! ./Components/common/LoginButton */ "./ClientApp/Components/common/Login.js"
           );
         /* harmony import */ var _RouteNotFound__WEBPACK_IMPORTED_MODULE_5__ =
           __webpack_require__(
