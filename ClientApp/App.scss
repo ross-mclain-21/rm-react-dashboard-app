@@ -1,5 +1,7 @@
 ﻿@use "sass:math";
-@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
 //global variables
 $coding-green-color: rgb(0, 255, 0);
 $coding-green-color-hover: rgb(0, 150, 0);
@@ -11,6 +13,12 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
+
+//overwrite variables
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$coding-green-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-toggler-border-color:  $coding-green-color;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 @font-face {
   font-family: "PressStart2P";
@@ -41,10 +49,6 @@ body {
 
 hr {
   color: $coding-green-color;
-}
-
-.top-navigation{
-  padding: 15px;
 }
 
 .user-avatar-name{
