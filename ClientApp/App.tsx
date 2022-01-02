@@ -12,13 +12,14 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import TopNavigation from "./Components/common/TopNavigation";
+import StarCanvas from "./Components/StarCanvas";
 
 function App() {
   library.add(fab, fas, far);
 
   return (
     <>
-      <div className="stars" />
+      <StarCanvas />
       <TopNavigation />
       <Router>
         <Routes>
