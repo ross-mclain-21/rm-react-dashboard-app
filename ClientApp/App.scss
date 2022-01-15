@@ -3,11 +3,11 @@
 
 
 //global variables
-$coding-green-color: rgb(0, 255, 0);
-$coding-green-color-hover: rgb(0, 150, 0);
-$coding-red-color: #ff0000;
-$coding-red-color-hover: #950000;
-$background-color: #222;
+$coding-green-color: rgb(3 199 181);
+$coding-green-color-hover: rgb(5 225 205);
+$coding-red-color: #bb2b2b;
+$coding-red-color-hover: #d13f3f;
+$background-color: rgb(30,39,44);
 
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
@@ -117,6 +117,7 @@ hr {
 .btn-code-green {
   @extend .btn-success;
   background-color: $coding-green-color;
+  color:$background-color;
 
   &:hover {
     background-color: $coding-green-color-hover;
@@ -155,62 +156,5 @@ hr {
   &:hover{
     background-color: $coding-red-color;
     color: $background-color !important;
-  }
-}
-
-@media (min-width: $breakpoint-lg) {
-  //starfield background.
-  //Inspired and edited from https://codepen.io/inegoita/pen/wLxObg
-
-  $stars: 350; // Number of start per layer
-  $depth: 300; // Depth between star layers
-  $speed: 10s; // Number of seconds to transition between layers
-  $width: 7500; // Width of the starfield
-  $height: 5000; // Height of the starfield
-
-  .stars {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    $box-shadow: ();
-    @for $i from 0 through $stars {
-      $box-shadow: $box-shadow,
-        (random($width)- (math.div($width, 2)) + px)
-          (random($height)- (math.div($height, 2)) + px)
-          hsl(90, 0%, 75%);
-    }
-    animation: fly $speed ease-out infinite alternate;
-    transform-style: preserve-3d;
-
-    &:after {
-      content: "";
-      position: absolute;
-      width: inherit;
-      height: inherit;
-      box-shadow: $box-shadow;
-    }
-    &:after {
-      transform: translateZ(-$depth * 2 + px);
-      animation: fade $speed ease-out infinite alternate;
-    }
-  }
-
-  @keyframes fly {
-    from {
-      transform: translateZ(0px) perspective(300px);
-    }
-    to {
-      transform: translateZ($depth) perspective(0px);
-    }
-  }
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
   }
 }

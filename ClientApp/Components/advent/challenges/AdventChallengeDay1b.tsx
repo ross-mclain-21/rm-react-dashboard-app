@@ -52,7 +52,7 @@ function AdventChallengeDay1b() {
       <div className="d-flex flex-column">
         <h5 className="mb-2">Code Explanation:</h5>
         <div className="px-3">
-          <ul className="color-code-green small code mb-0">
+          <ul className="color-code-green small mb-0">
             <li>
               Take in input array as :number[]. I took the data from the advent
               website and stored it as json

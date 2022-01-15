@@ -49,7 +49,7 @@ function AdventChallengeDay3a() {
       <div className="d-flex flex-column mb-3">
         <h5 className="mb-2">Code:</h5>
         <div className="px-3">
-          <pre className="color-code-green small code mb-0">{` const solvePuzzle = (inputData: string[]) => {
+          <pre className="color-code-green small mb-0">{` const solvePuzzle = (inputData: string[]) => {
     const indicesMap = new Map<number, number[]>();
     let gammaRate = "";
     let epsilonRate = "";

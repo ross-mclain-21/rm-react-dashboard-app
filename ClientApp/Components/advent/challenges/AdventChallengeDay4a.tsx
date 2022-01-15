@@ -43,7 +43,7 @@ function AdventChallengeDay4a() {
       <div className="d-flex flex-column">
         <h5 className="mb-2">Code Explanation:</h5>
         <div className="px-3">
-          <ul className="color-code-green small code mb-0">
+          <ul className="color-code-green small mb-0">
             <li>Take in binary code input array as :{`<string>[]`}.</li>
             <li>
               Loop over each binary number, turning it into a char array and

@@ -46,13 +46,5 @@
     "description": "Next, you should verify the life support rating, which can be determined by multiplying the oxygen generator rating by the CO2 scrubber rating.\n\nBoth the oxygen generator rating and the CO2 scrubber rating are values that can be found in your diagnostic report - finding them is the tricky part. Both values are located using a similar process that involves filtering out values until only one remains. Before searching for either rating value, start with the full list of binary numbers from your diagnostic report and consider just the first bit of those numbers. Then:\n\nKeep only numbers selected by the bit criteria for the type of rating value for which you are searching. Discard numbers which do not match the bit criteria.\nIf you only have one number left, stop; this is the rating value for which you are searching.\nOtherwise, repeat the process, considering the next bit to the right.\nThe bit criteria depends on which type of rating value you want to find:\n\nTo find oxygen generator rating, determine the most common value (0 or 1) in the current bit position, and keep only numbers with that bit in that position. If 0 and 1 are equally common, keep values with a 1 in the position being considered.\nTo find CO2 scrubber rating, determine the least common value (0 or 1) in the current bit position, and keep only numbers with that bit in that position. If 0 and 1 are equally common, keep values with a 0 in the position being considered.",
     "success": true,
     "link": "https://adventofcode.com/2021/day/3"
-  },
-  {
-    "id": 7,
-    "identifier": "4a",
-    "name": "Giant Squid Part 1",
-    "description": "Bingo is played on a set of boards each consisting of a 5x5 grid of numbers. Numbers are chosen at random, and the chosen number is marked on all boards on which it appears. (Numbers may not appear on all boards.) If all numbers in any row or any column of a board are marked, that board wins. (Diagonals don't count.)\n\nThe submarine has a bingo subsystem to help passengers (currently, you and the giant squid) pass the time. It automatically generates a random order in which to draw numbers and a random set of boards (your puzzle input).",
-    "success": false,
-    "link": "https://adventofcode.com/2021/day/4"
   }
 ]

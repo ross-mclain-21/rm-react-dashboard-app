@@ -72,7 +72,7 @@ function HomeDetail() {
           <a className="btn btn-outline-code-green mb-3" href="/resume">
             Resume
           </a>
-          <a className="btn btn-outline-code-red mb-3" href="/advent">
+          <a className="btn btn-outline-code-green mb-3" href="/advent">
             Advent of Code 2021
           </a>
         </div>

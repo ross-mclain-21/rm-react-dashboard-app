@@ -7,6 +7,8 @@ import axios from "axios";
 import { IAdventChallenge } from "../common/CommonInterfaces";
 import AdventContext from "./AdventContext";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function Advent() {
   let params = useParams();
@@ -63,7 +65,7 @@ function Advent() {
         {adventId == null ? (
           <>
             <div className="mb-5">
-              <Button className="btn-outline-code-red" href="/">
+              <Button className="btn-outline-code-green" href="/">
                 Return Home!
               </Button>
             </div>
@@ -103,10 +105,13 @@ function Advent() {
                         }
                         className={`btn ${
                           adventId === value.id.toString()
-                            ? "btn-code-green"
-                            : "btn-code-red"
-                        } rounded advent-index flex-fill`}
+                            ? "btn-outline-code-green"
+                            : "btn-code-green"
+                        } rounded advent-index flex-fill position-relative`}
                       >
+                        <div className={"earned-star"}>
+                          <FontAwesomeIcon icon={faStar} />
+                        </div>
                         {value.identifier}
                       </a>
                     </div>

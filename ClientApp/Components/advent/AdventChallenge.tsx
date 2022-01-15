@@ -55,7 +55,7 @@ function AdventChallenge() {
   return (
     <>
       <div className="mb-3">
-        <Button className="btn-outline-code-red" href="/advent">
+        <Button className="btn-outline-code-green" href="/advent">
           Return To Puzzles!
         </Button>
       </div>
