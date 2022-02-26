@@ -14,7 +14,7 @@
   },
   {
     "title": "Job Estimator",
-    "link": "http://www.jobestimator.mclain.de/",
+    "link": "http://www.jobestimator.mclain.de",
     "description": "I created this website for my dad to enable him to build out and track job estimates from the ground up. It allows for work items to be defined with an average time requirement and also allows for overrides when unexpected circumstances arise.",
     "technologies": [
       "HTML",
