@@ -4,10 +4,13 @@ import "../../App.scss";
 import UserAvatar from "./UserAvatar";
 import LogoutButton from "./LogoutButton";
 import LoginButton from "./LoginButton";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
+import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function TopNavigation() {
   const { isLoading, isAuthenticated } = useAuth0();
+  const location = useLocation();
   return (
     <Navbar
       bg="dark"
@@ -18,7 +21,16 @@ export default function TopNavigation() {
       <Container>
         <Navbar.Toggle aria-controls="top-navigation" />
         <Navbar.Collapse id="top-navigation">
-          <div className="d-flex align-items-center justify-content-end flex-fill">
+          <div className="d-flex align-items-center justify-content-between flex-fill">
+            <div className={"me-auto"}>
+              {location.pathname !== "/" ? (
+                <Link className="btn btn-outline-code-green btn-sm" to="/">
+                  Return Home!
+                </Link>
+              ) : (
+                <></>
+              )}
+            </div>
             <UserAvatar />
             {isLoading ? (
               <></>

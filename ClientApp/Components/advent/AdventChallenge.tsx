@@ -5,6 +5,7 @@ import AdventContext from "./AdventContext";
 import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function AdventChallenge() {
   let params = useParams();
@@ -55,9 +56,9 @@ function AdventChallenge() {
   return (
     <>
       <div className="mb-3">
-        <Button className="btn-outline-code-green" href="/advent">
+        <Link className="btn btn-outline-code-green" to="/advent">
           Return To Puzzles!
-        </Button>
+        </Link>
       </div>
       {selectedAdventData == null ? (
         <></>

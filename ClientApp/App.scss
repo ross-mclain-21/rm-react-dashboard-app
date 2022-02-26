@@ -51,6 +51,15 @@ hr {
   color: $coding-green-color;
 }
 
+
+a {
+  color: $coding-green-color;
+
+  &:hover {
+    color: $coding-green-color-hover;
+  }
+}
+
 .user-avatar-name{
   overflow-x:hidden;
 }
@@ -157,4 +166,8 @@ hr {
     background-color: $coding-red-color;
     color: $background-color !important;
   }
+}
+
+.cog-settings-wheel{
+  font-size:1.4rem;
 }

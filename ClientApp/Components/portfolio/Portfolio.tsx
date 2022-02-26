@@ -77,11 +77,6 @@ function Portfolio() {
     >
       <div className="my-3 p-md-5 p-3">
         <div className="">
-          <div className="">
-            <Button className="btn-outline-code-green mb-4" href="/">
-              Return Home!
-            </Button>
-          </div>
           <div className="d-flex align-items-start flex-nowrap">
             <div className="row portfolio-item-list">
               {[...portfolioItemList]

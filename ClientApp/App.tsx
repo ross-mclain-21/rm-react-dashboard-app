@@ -7,19 +7,27 @@ import Portfolio from "./Components/portfolio/Portfolio";
 import Resume from "./Components/resume/Resume";
 import AdventChallenge from "./Components/advent/AdventChallenge";
 import Advent from "./Components/advent/Advent";
+import Settings from "./Components/settings/Settings";
+import TopNavigation from "./Components/common/TopNavigation";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
-import TopNavigation from "./Components/common/TopNavigation";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 function App() {
   library.add(fab, fas, far);
 
   return (
-    <>
-      <TopNavigation />
+    <Auth0Provider
+      domain="dev-ry9eoacx.us.auth0.com"
+      clientId={`${process.env.REACT_APP_AUTH0_CLIENTID}`}
+      redirectUri={window.location.origin}
+      scope={"openid profile email admin owner"}
+    >
       <Router>
+        <TopNavigation />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Portfolio" element={<Portfolio />} />
@@ -27,10 +35,11 @@ function App() {
           <Route path="/Advent" element={<Advent />}>
             <Route path=":adventId" element={<AdventChallenge />} />
           </Route>
+          <Route path="/Settings" element={<Settings />} />
           <Route path="*" element={<RouteNotFound />} />
         </Routes>
       </Router>
-    </>
+    </Auth0Provider>
   );
 }
 
