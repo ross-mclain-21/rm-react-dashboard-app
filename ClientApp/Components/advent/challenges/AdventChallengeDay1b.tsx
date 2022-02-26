@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../Advent.scss";
-import AdventContext from "../AdventContext";
 import { adventDay1Data } from "../data/AdventDataSource";
 
 function AdventChallengeDay1b() {
-  const { selectedAdventData } = useContext(AdventContext);
-
   const solvePuzzle = (inputData: number[]) =>
     inputData.reduce(
       (acc, v, i) =>
@@ -55,7 +52,7 @@ function AdventChallengeDay1b() {
       <div className="d-flex flex-column">
         <h5 className="mb-2">Code Explanation:</h5>
         <div className="px-3">
-          <ul className="color-code-green small code mb-0">
+          <ul className="color-code-green small mb-0">
             <li>
               Take in input array as :number[]. I took the data from the advent
               website and stored it as json

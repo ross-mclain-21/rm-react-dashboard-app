@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./Advent.scss";
 import { Button } from "react-bootstrap";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useParams } from "react-router";
 import axios from "axios";
 import { IAdventChallenge } from "../common/CommonInterfaces";
 import AdventContext from "./AdventContext";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function Advent() {
   let params = useParams();
@@ -62,14 +64,13 @@ function Advent() {
       <div className="advent-container d-flex flex-column flex-fill p-md-5 p-3">
         {adventId == null ? (
           <>
-            <div className="mb-5">
-              <Button className="btn-outline-code-red" href="/">
-                Return Home!
-              </Button>
-            </div>
             <h1 className="header-text-sm">Advent of Code 2021</h1>
             <div className="d-flex flex-column align-items-center justify-content-center p-3">
-              <a href="https://adventofcode.com/2021/about" className="mb-3">
+              <a
+                href="https://adventofcode.com/2021/about"
+                target="_blank"
+                className="mb-3"
+              >
                 https://adventofcode.com/2021/about
               </a>
               <p className="mb-0">
@@ -91,20 +92,23 @@ function Advent() {
                       key={value.identifier}
                       className="col-md-1 col-sm-3 col-4 mb-3 d-flex align-items-center justify-content-center"
                     >
-                      <a
-                        href={
+                      <Link
+                        to={
                           adventId === value.id.toString()
                             ? "/advent/"
                             : `/advent/${value.id}`
                         }
                         className={`btn ${
                           adventId === value.id.toString()
-                            ? "btn-code-green"
-                            : "btn-code-red"
-                        } rounded advent-index flex-fill`}
+                            ? "btn-outline-code-green"
+                            : "btn-code-green"
+                        } rounded advent-index flex-fill position-relative`}
                       >
+                        <div className={"earned-star"}>
+                          <FontAwesomeIcon icon={faStar} />
+                        </div>
                         {value.identifier}
-                      </a>
+                      </Link>
                     </div>
                   );
                 })}

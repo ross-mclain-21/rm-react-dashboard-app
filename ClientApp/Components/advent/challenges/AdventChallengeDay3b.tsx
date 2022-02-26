@@ -1,11 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../Advent.scss";
-import AdventContext from "../AdventContext";
-import {
-  adventDay2Data,
-  adventDay3Data,
-  IAdventDay2Data,
-} from "../data/AdventDataSource";
+import { adventDay3Data } from "../data/AdventDataSource";
 
 function AdventChallengeDay3b() {
   const determineCommonBit = (
@@ -135,7 +130,7 @@ function AdventChallengeDay3b() {
       <div className="d-flex flex-column">
         <h5 className="mb-2">Code Explanation:</h5>
         <div className="px-3">
-          <ul className="color-code-green small code mb-0">
+          <ul className="color-code-green small mb-0">
             <li>Take in binary code input array as :{`<string>[]`}.</li>
             <li>
               Use my recursive function to get the Oxygen Generator Rating and

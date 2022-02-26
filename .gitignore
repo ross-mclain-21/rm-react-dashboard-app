@@ -261,4 +261,3 @@ __pycache__/
 *.pyc
 
 #dotenv
-.env

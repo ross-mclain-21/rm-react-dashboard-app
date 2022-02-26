@@ -1,4 +1,3 @@
-const webpack = require("webpack");
 const path = require("path");
 
 const SERVER_DIR = path.resolve(__dirname, "ServerApp");
@@ -8,9 +7,11 @@ const webpackNodeExternals = require("webpack-node-externals");
 
 const { merge } = require("webpack-merge");
 const baseConfig = require("./webpack.base.js");
+const Dotenv = require("dotenv-webpack");
 
 const config = {
   target: "node",
+  plugins: [new Dotenv()],
   entry: SERVER_DIR + "/Server.js",
   output: {
     path: BUILD_DIR,

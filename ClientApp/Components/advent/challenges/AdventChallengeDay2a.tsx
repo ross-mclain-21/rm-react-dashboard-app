@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../Advent.scss";
-import AdventContext from "../AdventContext";
 import { adventDay2Data, IAdventDay2Data } from "../data/AdventDataSource";
 
 function AdventChallengeDay2a() {
@@ -76,7 +75,7 @@ function AdventChallengeDay2a() {
       <div className="d-flex flex-column">
         <h5 className="mb-2">Code Explanation:</h5>
         <div className="px-3">
-          <ul className="color-code-green small code mb-0">
+          <ul className="color-code-green small mb-0">
             <li>Take in input array as :{`<string,number>[]`}.</li>
             <li>
               Loop over each command and add forward or up/down to the depth.

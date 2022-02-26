@@ -19,14 +19,6 @@
   font-family: PressStart2P, IBMPlexMono, serif !important;
 }
 
-a {
-  color: $coding-green-color;
-
-  &:hover {
-    color: $coding-green-color-hover;
-  }
-}
-
 .blink {
   animation: blink-animation 1.5s steps(2, start) infinite;
   -webkit-animation: blink-animation 1.5s steps(2, start) infinite;

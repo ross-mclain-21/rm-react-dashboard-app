@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function HomeDetail() {
   return (
@@ -66,15 +67,15 @@ function HomeDetail() {
         className="col-md-6 d-flex flex-column align-items-center pt-md-2 pt-4"
       >
         <div className="d-flex flex-column">
-          <a className="btn btn-outline-code-green mb-3" href="/portfolio">
+          <Link className="btn btn-outline-code-green mb-3" to={"/portfolio"}>
             Portfolio
-          </a>
-          <a className="btn btn-outline-code-green mb-3" href="/resume">
+          </Link>
+          <Link className="btn btn-outline-code-green mb-3" to="/resume">
             Resume
-          </a>
-          <a className="btn btn-outline-code-red mb-3" href="/advent">
+          </Link>
+          <Link className="btn btn-outline-code-green mb-3" to="/advent">
             Advent of Code 2021
-          </a>
+          </Link>
         </div>
       </motion.div>
     </div>

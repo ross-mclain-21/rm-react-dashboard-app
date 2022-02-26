@@ -1,11 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import "../Advent.scss";
-import AdventContext from "../AdventContext";
-import {
-  adventDay2Data,
-  adventDay3Data,
-  IAdventDay2Data,
-} from "../data/AdventDataSource";
+import { adventDay3Data } from "../data/AdventDataSource";
 
 function AdventChallengeDay3a() {
   const solvePuzzle = (inputData: string[]) => {
@@ -54,7 +49,7 @@ function AdventChallengeDay3a() {
       <div className="d-flex flex-column mb-3">
         <h5 className="mb-2">Code:</h5>
         <div className="px-3">
-          <pre className="color-code-green small code mb-0">{` const solvePuzzle = (inputData: string[]) => {
+          <pre className="color-code-green small mb-0">{` const solvePuzzle = (inputData: string[]) => {
     const indicesMap = new Map<number, number[]>();
     let gammaRate = "";
     let epsilonRate = "";
