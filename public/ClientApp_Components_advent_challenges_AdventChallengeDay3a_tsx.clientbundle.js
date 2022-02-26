@@ -86,7 +86,7 @@ function AdventChallengeDay3a() {
   }, "Code:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "px-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("pre", {
-    className: "color-code-green small code mb-0"
+    className: "color-code-green small mb-0"
   }, " const solvePuzzle = (inputData: string[]) => {\n    const indicesMap = new Map<number, number[]>();\n    let gammaRate = \"\";\n    let epsilonRate = \"\";\n    inputData.map((value) => {\n      Array.from(value).map((bit, index) => {\n        if (indicesMap.has(index) == false) indicesMap.set(index, []);\n        indicesMap?.get(index)?.push(parseInt(bit));\n      });\n    });\n    indicesMap.forEach((value) => {\n      const zeroCount = value.reduce(\n        (acc, v, i) => (acc += v === 0 ? 1 : 0),\n        0\n      );\n      const oneCount = value.length - zeroCount;\n      gammaRate += zeroCount > oneCount ? \"0\" : \"1\";\n      epsilonRate += zeroCount < oneCount ? \"0\" : \"1\";\n    });\n\n    const result = parseInt(gammaRate, 2) * parseInt(epsilonRate, 2);\n\n    return [gammaRate, epsilonRate, result];\n  };"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "d-flex flex-column"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {

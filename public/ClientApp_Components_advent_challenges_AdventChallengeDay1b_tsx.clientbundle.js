@@ -13,17 +13,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Advent_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Advent.scss */ "./ClientApp/Components/advent/Advent.scss");
-/* harmony import */ var _AdventContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../AdventContext */ "./ClientApp/Components/advent/AdventContext.tsx");
-/* harmony import */ var _data_AdventDataSource__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../data/AdventDataSource */ "./ClientApp/Components/advent/data/AdventDataSource.ts");
-
+/* harmony import */ var _data_AdventDataSource__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/AdventDataSource */ "./ClientApp/Components/advent/data/AdventDataSource.ts");
 
 
 
 
 function AdventChallengeDay1b() {
-  var _useContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_AdventContext__WEBPACK_IMPORTED_MODULE_2__["default"]),
-      selectedAdventData = _useContext.selectedAdventData;
-
   var solvePuzzle = function solvePuzzle(inputData) {
     return inputData.reduce(function (acc, v, i) {
       return acc += inputData[i] + inputData[i + 1] + inputData[i + 2] < inputData[i + 1] + inputData[i + 2] + inputData[i + 3] ? 1 : 0;
@@ -40,7 +35,7 @@ function AdventChallengeDay1b() {
     className: "px-3 small"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "small data-box"
-  }, _data_AdventDataSource__WEBPACK_IMPORTED_MODULE_3__.adventDay1Data.join(", ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, _data_AdventDataSource__WEBPACK_IMPORTED_MODULE_2__.adventDay1Data.join(", ")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "d-flex flex-column"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
     className: "mb-2"
@@ -48,7 +43,7 @@ function AdventChallengeDay1b() {
     className: "px-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "color-code-green"
-  }, "There are ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, solvePuzzle(_data_AdventDataSource__WEBPACK_IMPORTED_MODULE_3__.adventDay1Data)), " larger \"window\" measurements when grouping the data by 3 concurrent data points instead of checking each item separately."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "There are ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, solvePuzzle(_data_AdventDataSource__WEBPACK_IMPORTED_MODULE_2__.adventDay1Data)), " larger \"window\" measurements when grouping the data by 3 concurrent data points instead of checking each item separately."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "d-flex flex-column mb-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", {
     className: "mb-2"
@@ -63,7 +58,7 @@ function AdventChallengeDay1b() {
   }, "Code Explanation:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "px-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: "color-code-green small code mb-0"
+    className: "color-code-green small mb-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Take in input array as :number[]. I took the data from the advent website and stored it as json"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Use Array.prototype.reduce() to use built-in functionality to add to the accumulated int if the sum of the first \"window\" aka 3 concurrent data points for ex. A (151, 152, 153) was less than the sum of the second \"window\" one index to the right B (152, 153, 158). In this example it is clear that the sum of A is less than B so that \"window is marked as an increase!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "This code only loops once through the array making this solution in Big O notation:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "N")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("i", null, "This is with an assumption that the Array.prototype.reduce() function doesn't do any extra iterating.", " ")))))));
 }
 
