@@ -3,11 +3,9 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 ReactDOM.render(
-  <div>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </div>,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
